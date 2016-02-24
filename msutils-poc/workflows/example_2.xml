@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<model version="2.1">
+  <id>7d72984b-ab32-4c95-aed9-e0ec58c92dd3</id>
+  <name>example 2</name>
+  <changecounter>3</changecounter>
+  <sib>
+    <id>9f9a1292-27cf-4fa6-b730-b670511d24d4</id>
+    <name>LoadMzMLData</name>
+    <label>LoadMzMLData</label>
+    <sib-uid>biotoolsCompose/demo-sibs/LoadMzMLData</sib-uid>
+    <taxonomy>biotools.biotoolsCompose.poc.sib.LoadMzMLData</taxonomy>
+    <position>46.0,63.0</position>
+    <finalbranches>default</finalbranches>
+    <finalbranches>error</finalbranches>
+    <userobject key="ABC$START">
+      <boolean>true</boolean>
+    </userobject>
+  </sib>
+  <sib>
+    <id>316e3ab4-e676-49d3-a4f7-5d055c97782c</id>
+    <name>ShowPng</name>
+    <label>ShowPng</label>
+    <sib-uid>biotoolsCompose/demo-sibs/ShowPng</sib-uid>
+    <taxonomy>biotools.biotoolsCompose.poc.sib.ShowPng</taxonomy>
+    <position>362.0,63.0</position>
+    <finalbranches>default</finalbranches>
+    <finalbranches>error</finalbranches>
+  </sib>
+  <edge>
+    <source>9f9a1292-27cf-4fa6-b730-b670511d24d4</source>
+    <target>316e3ab4-e676-49d3-a4f7-5d055c97782c</target>
+    <point>90.0,90.0</point>
+    <point>390.0,90.0</point>
+    <labelposition>500.0,0.0</labelposition>
+    <branch>default</branch>
+    <userobject key="prophets.fillinbranch">
+      <boolean>true</boolean>
+    </userobject>
+    <userobject key="prophets.branchformulas">
+      <map>
+        <entry>
+          <string>default</string>
+          <list>
+            <de.jabc.plugin.prophets.lib.data.FormulaTemplateInstance>
+              <templateName>module avoidance</templateName>
+              <variableValues>
+                <entry>
+                  <string>v1</string>
+                  <string>LoadMGFData</string>
+                </entry>
+              </variableValues>
+            </de.jabc.plugin.prophets.lib.data.FormulaTemplateInstance>
+            <de.jabc.plugin.prophets.lib.data.FormulaTemplateInstance>
+              <templateName>module avoidance</templateName>
+              <variableValues>
+                <entry>
+                  <string>v1</string>
+                  <string>LoadMzMLData</string>
+                </entry>
+              </variableValues>
+            </de.jabc.plugin.prophets.lib.data.FormulaTemplateInstance>
+            <de.jabc.plugin.prophets.lib.data.FormulaTemplateInstance>
+              <templateName>module avoidance</templateName>
+              <variableValues>
+                <entry>
+                  <string>v1</string>
+                  <string>LoadNetCDFData</string>
+                </entry>
+              </variableValues>
+            </de.jabc.plugin.prophets.lib.data.FormulaTemplateInstance>
+            <de.jabc.plugin.prophets.lib.data.FormulaTemplateInstance>
+              <templateName>module enforcement</templateName>
+              <variableValues>
+                <entry>
+                  <string>v1</string>
+                  <string>Formatting</string>
+                </entry>
+              </variableValues>
+            </de.jabc.plugin.prophets.lib.data.FormulaTemplateInstance>
+          </list>
+        </entry>
+      </map>
+    </userobject>
+  </edge>
+  <values/>
+</model>

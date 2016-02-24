@@ -1,0 +1,352 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY modules "http://de/jabc/prophets/modules#" >
+    <!ENTITY modules2 "http://de/jabc/prophets/modules#3" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY X "http://de/jabc/prophets/modules#X!" >
+    <!ENTITY modules3 "http://de/jabc/prophets/modules#18" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY MRM "http://de/jabc/prophets/modules#MRM/" >
+    <!ENTITY owl2 "http://de/jabc/prophets/modules#owl:" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY Matrix "http://de/jabc/prophets/modules#Matrix/" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY properties "http://de/jabc/prophets/modules/properties/" >
+    <!ENTITY Phylogenetic_sub "http://de/jabc/prophets/modules#Phylogenetic_sub/" >
+    <!ENTITY STS "http://de/jabc/prophets/modules#Sequence_tagged_site_(STS)" >
+    <!ENTITY Phylogenetic_footprinting_ "http://de/jabc/prophets/modules#Phylogenetic_footprinting_/" >
+    <!ENTITY SECIS "http://de/jabc/prophets/modules#Selenocysteine_insertion_sequence_(SECIS)" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2006/12/owl2-xml#"
+     xml:base="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:Phylogenetic_sub="&modules;Phylogenetic_sub/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:MRM="&modules;MRM/"
+     xmlns:SECIS="&modules;Selenocysteine_insertion_sequence_(SECIS)"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:modules="http://de/jabc/prophets/modules#"
+     xmlns:modules2="&modules;3"
+     xmlns:Matrix="&modules;Matrix/"
+     xmlns:STS="&modules;Sequence_tagged_site_(STS)"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:Phylogenetic_footprinting_="&modules;Phylogenetic_footprinting_/"
+     xmlns:modules3="&modules;18"
+     xmlns:X="&modules;X!"
+     xmlns:owl2="&modules;owl:"
+     xmlns:properties="http://de/jabc/prophets/modules/properties/"
+     URI="http://de/jabc/prophets/modules">
+    <SubClassOf>
+        <OWLClass URI="&modules;Analysis"/>
+        <OWLClass URI="&modules;Operation"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&modules;Analysis"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&modules;Blind_peptide_database_search"/>
+        <OWLClass URI="&modules;Peptide_database_search"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&modules;Blind_peptide_database_search"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&modules;Calculation"/>
+        <OWLClass URI="&modules;Operation"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&modules;Calculation"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&modules;Chromatogram_visualisation"/>
+        <OWLClass URI="&modules;Visualisation"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&modules;Chromatogram_visualisation"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&modules;Database_search"/>
+        <OWLClass URI="&modules;Query_and_retrieval"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&modules;Database_search"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&modules;File_handling"/>
+        <OWLClass URI="&modules;Operation"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&modules;File_handling"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&modules;Formatting"/>
+        <OWLClass URI="&modules;File_handling"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&modules;Formatting"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&modules;Operation"/>
+        <OWLClass URI="&owl;Thing"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&modules;Operation"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&modules;Peptide_database_search"/>
+        <OWLClass URI="&modules;Database_search"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&modules;Peptide_database_search"/>
+        <OWLClass URI="&modules;Peptide_identification"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&modules;Peptide_database_search"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&modules;Peptide_identification"/>
+        <OWLClass URI="&modules;Spectral_analysis"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&modules;Peptide_identification"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&modules;Query_and_retrieval"/>
+        <OWLClass URI="&modules;Operation"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&modules;Query_and_retrieval"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&modules;Retention_times_calculation"/>
+        <OWLClass URI="&modules;Calculation"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&modules;Retention_times_calculation"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&modules;Spectral_analysis"/>
+        <OWLClass URI="&modules;Analysis"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&modules;Spectral_analysis"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&modules;Validation"/>
+        <OWLClass URI="&modules;Operation"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&modules;Validation"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&modules;Validation_of_peptide-spectrum_matches"/>
+        <OWLClass URI="&modules;Peptide_database_search"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&modules;Validation_of_peptide-spectrum_matches"/>
+        <OWLClass URI="&modules;Validation"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&modules;Validation_of_peptide-spectrum_matches"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&modules;Visualisation"/>
+        <OWLClass URI="&modules;Operation"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&modules;Visualisation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&properties;branchName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&properties;sibUID"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;Blind_peptide_database_search"/>
+        <Individual URI="&modules;Comet"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;Comet"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;Formatting"/>
+        <Individual URI="&modules;CompassXport_1"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;CompassXport_1"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;Formatting"/>
+        <Individual URI="&modules;CompassXport_2"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;CompassXport_2"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;Formatting"/>
+        <Individual URI="&modules;CompassXport_3"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;CompassXport_3"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;Formatting"/>
+        <Individual URI="&modules;CompassXport_4"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;CompassXport_4"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;Formatting"/>
+        <Individual URI="&modules;CompassXport_5"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;CompassXport_5"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;Formatting"/>
+        <Individual URI="&modules;CompassXport_6"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;CompassXport_6"/>
+    </Declaration>
+    <Declaration>
+        <Individual URI="&modules;LoadMGFData"/>
+    </Declaration>
+    <Declaration>
+        <Individual URI="&modules;LoadMzMLData"/>
+    </Declaration>
+    <Declaration>
+        <Individual URI="&modules;LoadNetCDFData"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;Chromatogram_visualisation"/>
+        <Individual URI="&modules;Pep3D_1"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;Pep3D_1"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;Chromatogram_visualisation"/>
+        <Individual URI="&modules;Pep3D_2"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;Pep3D_2"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;Validation_of_peptide-spectrum_matches"/>
+        <Individual URI="&modules;PeptideProphet"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;PeptideProphet"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;Retention_times_calculation"/>
+        <Individual URI="&modules;SSRCalc"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;SSRCalc"/>
+    </Declaration>
+    <Declaration>
+        <Individual URI="&modules;ShowPng"/>
+    </Declaration>
+    <Declaration>
+        <Individual URI="&modules;ShowTextualFormat"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;Blind_peptide_database_search"/>
+        <Individual URI="&modules;X!Tandem"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;X!Tandem"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;Formatting"/>
+        <Individual URI="&modules;msconvert_1"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;msconvert_1"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;Formatting"/>
+        <Individual URI="&modules;msconvert_2"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;msconvert_2"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;Formatting"/>
+        <Individual URI="&modules;msconvert_3"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;msconvert_3"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;Formatting"/>
+        <Individual URI="&modules;msconvert_4"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;msconvert_4"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;Formatting"/>
+        <Individual URI="&modules;msconvert_5"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;msconvert_5"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;Formatting"/>
+        <Individual URI="&modules;msconvert_6"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;msconvert_6"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;Formatting"/>
+        <Individual URI="&modules;msconvert_7"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;msconvert_7"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;Formatting"/>
+        <Individual URI="&modules;msconvert_8"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;msconvert_8"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;Formatting"/>
+        <Individual URI="&modules;msconvert_9"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;msconvert_9"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;Chromatogram_visualisation"/>
+        <Individual URI="&modules;mzXMLplot"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;mzXMLplot"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;Retention_times_calculation"/>
+        <Individual URI="&modules;rt3"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;rt3"/>
+    </Declaration>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.903) http://owlapi.sourceforge.net -->
+

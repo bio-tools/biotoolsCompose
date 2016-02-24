@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<model version="2.1">
+  <id>9cd45e0f-7bd4-4872-a9ba-5438a934fd87</id>
+  <name>example 1</name>
+  <changecounter>3</changecounter>
+  <sib>
+    <id>23e71a5c-20ce-4689-8f9a-a76042b8c59f</id>
+    <name>LoadMzMLData</name>
+    <label>LoadMzMLData</label>
+    <sib-uid>biotoolsCompose/demo-sibs/LoadMzMLData</sib-uid>
+    <taxonomy>biotools.biotoolsCompose.poc.sib.LoadMzMLData</taxonomy>
+    <position>31.0,48.0</position>
+    <finalbranches>default</finalbranches>
+    <finalbranches>error</finalbranches>
+    <userobject key="ABC$START">
+      <boolean>true</boolean>
+    </userobject>
+  </sib>
+  <sib>
+    <id>89f87880-48af-46b6-b1fa-f95bbe7b35f9</id>
+    <name>ShowPng</name>
+    <label>ShowPng</label>
+    <sib-uid>biotoolsCompose/demo-sibs/ShowPng</sib-uid>
+    <taxonomy>biotools.biotoolsCompose.poc.sib.ShowPng</taxonomy>
+    <position>347.0,48.0</position>
+    <finalbranches>default</finalbranches>
+    <finalbranches>error</finalbranches>
+  </sib>
+  <edge>
+    <source>23e71a5c-20ce-4689-8f9a-a76042b8c59f</source>
+    <target>89f87880-48af-46b6-b1fa-f95bbe7b35f9</target>
+    <point>93.0,66.54</point>
+    <point>357.0,66.54</point>
+    <labelposition>500.0,0.0</labelposition>
+    <branch>default</branch>
+    <userobject key="prophets.fillinbranch">
+      <boolean>true</boolean>
+    </userobject>
+  </edge>
+  <values/>
+</model>

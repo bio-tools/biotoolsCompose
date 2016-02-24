@@ -1,0 +1,197 @@
+<list>
+
+<template>
+	<description>Do not use the module ${v1}.</description>
+	<!-- G(!<v1>true)  -->
+	<formulaTemplate>G(!&lt;&quot;${v1}&quot;&gt;true)</formulaTemplate>
+	<name>module avoidance</name>
+	<variableDomains>
+		<entry>
+			<string>v1</string>
+			<domain>MODULE</domain>
+		</entry>
+	</variableDomains>
+</template>
+  
+<template>
+	<description>If module ${v1} is used, do not use module ${v2} subsequently.</description>
+	<!-- G(!<v1>true OR X(G(!(<v2>true))))  -->
+	<formulaTemplate>G(!&lt;"${v1}"&gt;true OR X(G(!(&lt;"${v2}"&gt;true))))</formulaTemplate>
+	<name>conditional module avoidance</name>
+	<variableDomains>
+		<entry>
+			<string>v1</string>
+			<domain>MODULE</domain>
+		</entry>
+		<entry>
+			<string>v2</string>
+			<domain>MODULE</domain>
+		</entry>
+	</variableDomains>
+</template>
+ 
+<template>
+	<description>At most one of the modules ${v1} and ${v2} may exist.</description>
+	<!-- !(F(<v1>true) and F(<v2>true))  -->
+	<formulaTemplate>!(F(&lt;"${v1}"&gt;true) and F(&lt;"${v2}"&gt;true))</formulaTemplate>
+	<name>module mutual exclusion</name>
+	<variableDomains>
+		<entry>
+			<string>v1</string>
+			<domain>MODULE</domain>
+		</entry>
+		<entry>
+			<string>v2</string>
+			<domain>MODULE</domain>
+		</entry>
+	</variableDomains>
+</template>
+  
+    
+<template>
+	<description>Do not use module ${v1} more than once.</description>
+	<!-- G(!<v1>true OR X(G(!<v1>true)))  -->
+	<formulaTemplate>G(!&lt;"${v1}"&gt;true OR X(G(!&lt;"${v1}"&gt;true)))</formulaTemplate>
+	<name>module redundancy avoidance</name>
+	<variableDomains>
+		<entry>
+			<string>v1</string>
+			<domain>MODULE</domain>
+		</entry>
+	</variableDomains>
+</template>
+  
+<template>
+	<description>Enforce the use of module ${v1}.</description>
+	<!-- F(<v1>true) -->
+	<formulaTemplate>F(&lt;"${v1}"&gt;true)</formulaTemplate>
+	<name>module enforcement</name>
+	<variableDomains>
+		<entry>
+			<string>v1</string>
+			<domain>MODULE</domain>
+		</entry>
+	</variableDomains>
+</template>
+  
+<template>
+	<description>If module ${v1} is used, module ${v2} has to be used subsequently.</description>
+	<!-- G(!<v1>true OR X(F(<v2>true))) -->
+	<formulaTemplate>G(!&lt;"${v1}"&gt;true OR X(F(&lt;"${v2}"&gt;true)))</formulaTemplate>
+	<name>conditional module enforcement</name>
+	<variableDomains>
+		<entry>
+			<string>v1</string>
+			<domain>MODULE</domain>
+		</entry>
+		<entry>
+			<string>v2</string>
+			<domain>MODULE</domain>
+		</entry>
+	</variableDomains>
+</template>
+
+<template>
+	<description>If module ${v1} is used, module ${v2} has to be used next.</description>
+	<!-- G(!<v1>true OR X(<v2>true)) -->
+	<formulaTemplate>G(!&lt;"${v1}"&gt;true OR X(&lt;"${v2}"&gt;true))</formulaTemplate>
+	<name>module succession</name>
+	<variableDomains>
+		<entry>
+			<string>v1</string>
+			<domain>MODULE</domain>
+		</entry>
+		<entry>
+			<string>v2</string>
+			<domain>MODULE</domain>
+		</entry>
+	</variableDomains>
+</template>
+
+<template>
+	<description>Module ${v1} depends on module ${v2}.</description>
+	<!-- !<v1>true WU <v2>true -->
+	<formulaTemplate>!&lt;"${v1}"&gt;true WU &lt;"${v2}"&gt;true</formulaTemplate>
+	<name>module dependency</name>
+	<variableDomains>
+		<entry>
+			<string>v1</string>
+			<domain>MODULE</domain>
+		</entry>
+		<entry>
+			<string>v2</string>
+			<domain>MODULE</domain>
+		</entry>
+	</variableDomains>
+</template>
+
+<template>
+	<description>Use module ${v1} as last module in the solution.</description>
+	<!-- F(<v1>true) AND G(!<v1>true OR !(X(X(true)))) -->
+	<formulaTemplate>F(&lt;"${v1}"&gt;true) AND G(!&lt;"${v1}"&gt;true OR !(X(X(true))))</formulaTemplate>
+	<name>final module</name>
+	<variableDomains>
+		<entry>
+			<string>v1</string>
+			<domain>MODULE</domain>
+		</entry>
+	</variableDomains>
+</template>
+
+<template>
+	<description>Avoid the type ${v1}</description>
+	<!-- G(!v1) -->
+	<formulaTemplate>G(!${v1})</formulaTemplate>
+	<name>type avoidance</name>
+	<variableDomains>
+		<entry>
+			<string>v1</string>
+			<domain>TYPE</domain>
+		</entry>
+	</variableDomains>
+</template>
+
+<template>
+	<description>Enforce the existence of the type ${v1} in the process.</description>
+	<!-- F(v1) -->
+	<formulaTemplate>F(${v1})</formulaTemplate>
+	<name>type enforcement</name>
+	<variableDomains>
+		<entry>
+			<string>v1</string>
+			<domain>TYPE</domain>
+		</entry>
+	</variableDomains>
+</template>
+
+<template>
+	<description>At most one of the types ${v1} and ${v2} may exist.</description>
+	<!-- !(F(v1) and F(v2)) -->
+	<formulaTemplate>!(F(${v1}) and F(${v2}))</formulaTemplate>
+	<name>type mutual exclusion</name>
+	<variableDomains>
+		<entry>
+			<string>v1</string>
+			<domain>TYPE</domain>
+		</entry>
+		<entry>
+			<string>v2</string>
+			<domain>TYPE</domain>
+		</entry>
+	</variableDomains>
+</template>
+
+<template>
+	<description>Add this formula as constraint: ${v1}</description>
+	<!-- v1 ;) -->
+	<formulaTemplate>${v1}</formulaTemplate>
+	<name>expert mode formula</name>
+	<variableDomains>
+		<entry>
+			<string>v1</string>
+			<domain>STRING</domain>
+		</entry>
+	</variableDomains>
+</template>
+ 
+</list>

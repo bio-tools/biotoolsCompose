@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY types "http://de/jabc/prophets/types#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY types2 "http://de/jabc/prophets/types#2" >
+    <!ENTITY types4 "http://de/jabc/prophets/types#3" >
+    <!ENTITY types3 "http://de/jabc/prophets/types#." >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY PED "http://de/jabc/prophets/types#PED/" >
+    <!ENTITY RDF "http://de/jabc/prophets/types#RDF/" >
+    <!ENTITY OWL "http://de/jabc/prophets/types#OWL/" >
+    <!ENTITY owl2 "http://de/jabc/prophets/types#owl:" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY nbrf "http://de/jabc/prophets/types#nbrf/" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY properties "http://de/jabc/prophets/types/properties/" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY sequence "http://de/jabc/prophets/types#Database_hits_(sequence)" >
+    <!ENTITY repeats "http://de/jabc/prophets/types#Sequence_features_(repeats)" >
+    <!ENTITY primers "http://de/jabc/prophets/types#Nucleic_acid_features_(primers)" >
+    <!ENTITY cliques "http://de/jabc/prophets/types#Phylogenetic_tree_report_(cliques)" >
+    <!ENTITY invariants "http://de/jabc/prophets/types#Phylogenetic_tree_report_(invariants)" >
+    <!ENTITY restriction_sites "http://de/jabc/prophets/types#Nucleic_acid_features_(restriction_sites)" >
+    <!ENTITY tree_distances "http://de/jabc/prophets/types#Phylogenetic_tree_report_(tree_distances)" >
+    <!ENTITY quality_evaluation "http://de/jabc/prophets/types#Protein_structure_report_(quality_evaluation)" >
+    <!ENTITY _including_images "http://de/jabc/prophets/types#MIME__HTML_format_for_Web_pages,_which_can_include_external_resources,_including_images," >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2006/12/owl2-xml#"
+     xml:base="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:repeats="&types;Sequence_features_(repeats)"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:quality_evaluation="&types;Protein_structure_report_(quality_evaluation)"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:_including_images="&types;MIME__HTML_format_for_Web_pages,_which_can_include_external_resources,_including_images,"
+     xmlns:types4="&types;3"
+     xmlns:tree_distances="&types;Phylogenetic_tree_report_(tree_distances)"
+     xmlns:RDF="&types;RDF/"
+     xmlns:types3="&types;."
+     xmlns:types2="&types;2"
+     xmlns:owl2="&types;owl:"
+     xmlns:nbrf="&types;nbrf/"
+     xmlns:types="http://de/jabc/prophets/types#"
+     xmlns:cliques="&types;Phylogenetic_tree_report_(cliques)"
+     xmlns:OWL="&types;OWL/"
+     xmlns:restriction_sites="&types;Nucleic_acid_features_(restriction_sites)"
+     xmlns:PED="&types;PED/"
+     xmlns:sequence="&types;Database_hits_(sequence)"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:primers="&types;Nucleic_acid_features_(primers)"
+     xmlns:properties="http://de/jabc/prophets/types/properties/"
+     xmlns:invariants="&types;Phylogenetic_tree_report_(invariants)"
+     URI="http://de/jabc/prophets/types">
+    <SubClassOf>
+        <OWLClass URI="&types;Binary_format"/>
+        <OWLClass URI="&types;Format"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;Binary_format"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;Format"/>
+        <OWLClass URI="&owl;Thing"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;Format"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;Format_(typed)"/>
+        <OWLClass URI="&types;Format"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;Format_(typed)"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;Image_format"/>
+        <OWLClass URI="&types;Format_(typed)"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;Image_format"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;MGF"/>
+        <OWLClass URI="&types;Mass_spectrometry_data_format"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;MGF"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;Mass_spectrometry_data_format"/>
+        <OWLClass URI="&types;Format_(typed)"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;Mass_spectrometry_data_format"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;PNG"/>
+        <OWLClass URI="&types;Binary_format"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&types;PNG"/>
+        <OWLClass URI="&types;Image_format"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;PNG"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;Textual_format"/>
+        <OWLClass URI="&types;Format"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;Textual_format"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;XML"/>
+        <OWLClass URI="&types;Format"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;XML"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;mzIdentML"/>
+        <OWLClass URI="&types;Mass_spectrometry_data_format"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&types;mzIdentML"/>
+        <OWLClass URI="&types;XML"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;mzIdentML"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;mzML"/>
+        <OWLClass URI="&types;Mass_spectrometry_data_format"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&types;mzML"/>
+        <OWLClass URI="&types;XML"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;mzML"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;mzXML"/>
+        <OWLClass URI="&types;Mass_spectrometry_data_format"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;mzXML"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;netCDF"/>
+        <OWLClass URI="&types;Mass_spectrometry_data_format"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;netCDF"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&properties;branchName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&properties;sibUID"/>
+    </Declaration>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.903) http://owlapi.sourceforge.net -->
+
