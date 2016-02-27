@@ -2,7 +2,7 @@ import json
 from pprint import pprint
 
 
-with open("bio.tools.json") as data_file:
+with open("bio.tools.json", encoding="utf8") as data_file:
     data = json.load(data_file)
 
 
