@@ -7,7 +7,9 @@
     <!ENTITY types2 "http://de/jabc/prophets/types#2" >
     <!ENTITY types4 "http://de/jabc/prophets/types#3" >
     <!ENTITY types3 "http://de/jabc/prophets/types#." >
+    <!ENTITY X "http://de/jabc/prophets/types#X!" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY GCT "http://de/jabc/prophets/types#GCT/" >
     <!ENTITY PED "http://de/jabc/prophets/types#PED/" >
     <!ENTITY RDF "http://de/jabc/prophets/types#RDF/" >
     <!ENTITY OWL "http://de/jabc/prophets/types#OWL/" >
@@ -40,9 +42,10 @@
      xmlns:_including_images="&types;MIME__HTML_format_for_Web_pages,_which_can_include_external_resources,_including_images,"
      xmlns:types4="&types;3"
      xmlns:tree_distances="&types;Phylogenetic_tree_report_(tree_distances)"
-     xmlns:RDF="&types;RDF/"
      xmlns:types3="&types;."
+     xmlns:RDF="&types;RDF/"
      xmlns:types2="&types;2"
+     xmlns:X="&types;X!"
      xmlns:owl2="&types;owl:"
      xmlns:nbrf="&types;nbrf/"
      xmlns:types="http://de/jabc/prophets/types#"
@@ -52,6 +55,7 @@
      xmlns:PED="&types;PED/"
      xmlns:sequence="&types;Database_hits_(sequence)"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:GCT="&types;GCT/"
      xmlns:primers="&types;Nucleic_acid_features_(primers)"
      xmlns:properties="http://de/jabc/prophets/types/properties/"
      xmlns:invariants="&types;Phylogenetic_tree_report_(invariants)"
@@ -110,6 +114,13 @@
         <OWLClass URI="&types;PNG"/>
     </Declaration>
     <SubClassOf>
+        <OWLClass URI="&types;TSV"/>
+        <OWLClass URI="&types;Textual_format"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;TSV"/>
+    </Declaration>
+    <SubClassOf>
         <OWLClass URI="&types;Textual_format"/>
         <OWLClass URI="&types;Format"/>
     </SubClassOf>
@@ -158,6 +169,13 @@
     </SubClassOf>
     <Declaration>
         <OWLClass URI="&types;netCDF"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;pepXML"/>
+        <OWLClass URI="&types;Mass_spectrometry_data_format"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;pepXML"/>
     </Declaration>
     <Declaration>
         <DataProperty URI="&properties;branchName"/>

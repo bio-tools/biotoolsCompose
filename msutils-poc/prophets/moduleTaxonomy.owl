@@ -71,6 +71,13 @@
         <OWLClass URI="&modules;Chromatogram_visualisation"/>
     </Declaration>
     <SubClassOf>
+        <OWLClass URI="&modules;Data_handling"/>
+        <OWLClass URI="&modules;Operation"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&modules;Data_handling"/>
+    </Declaration>
+    <SubClassOf>
         <OWLClass URI="&modules;Database_search"/>
         <OWLClass URI="&modules;Query_and_retrieval"/>
     </SubClassOf>
@@ -78,15 +85,8 @@
         <OWLClass URI="&modules;Database_search"/>
     </Declaration>
     <SubClassOf>
-        <OWLClass URI="&modules;File_handling"/>
-        <OWLClass URI="&modules;Operation"/>
-    </SubClassOf>
-    <Declaration>
-        <OWLClass URI="&modules;File_handling"/>
-    </Declaration>
-    <SubClassOf>
         <OWLClass URI="&modules;Formatting"/>
-        <OWLClass URI="&modules;File_handling"/>
+        <OWLClass URI="&modules;Data_handling"/>
     </SubClassOf>
     <Declaration>
         <OWLClass URI="&modules;Formatting"/>
@@ -124,11 +124,11 @@
         <OWLClass URI="&modules;Query_and_retrieval"/>
     </Declaration>
     <SubClassOf>
-        <OWLClass URI="&modules;Retention_times_calculation"/>
+        <OWLClass URI="&modules;Retention_times_prediction"/>
         <OWLClass URI="&modules;Calculation"/>
     </SubClassOf>
     <Declaration>
-        <OWLClass URI="&modules;Retention_times_calculation"/>
+        <OWLClass URI="&modules;Retention_times_prediction"/>
     </Declaration>
     <SubClassOf>
         <OWLClass URI="&modules;Spectral_analysis"/>
@@ -248,7 +248,7 @@
         <Individual URI="&modules;PeptideProphet"/>
     </Declaration>
     <ClassAssertion>
-        <OWLClass URI="&modules;Retention_times_calculation"/>
+        <OWLClass URI="&modules;Retention_times_prediction"/>
         <Individual URI="&modules;SSRCalc"/>
     </ClassAssertion>
     <Declaration>
@@ -266,6 +266,34 @@
     </ClassAssertion>
     <Declaration>
         <Individual URI="&modules;X!Tandem"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;Formatting"/>
+        <Individual URI="&modules;idconvert_1"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;idconvert_1"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;Formatting"/>
+        <Individual URI="&modules;idconvert_2"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;idconvert_2"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;Formatting"/>
+        <Individual URI="&modules;idconvert_3"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;idconvert_3"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;Formatting"/>
+        <Individual URI="&modules;idconvert_4"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;idconvert_4"/>
     </Declaration>
     <ClassAssertion>
         <OWLClass URI="&modules;Formatting"/>
@@ -338,11 +366,53 @@
         <Individual URI="&modules;mzXMLplot"/>
     </Declaration>
     <ClassAssertion>
-        <OWLClass URI="&modules;Retention_times_calculation"/>
-        <Individual URI="&modules;rt3"/>
+        <OWLClass URI="&modules;Retention_times_prediction"/>
+        <Individual URI="&modules;rt"/>
     </ClassAssertion>
     <Declaration>
-        <Individual URI="&modules;rt3"/>
+        <Individual URI="&modules;rt"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;Retention_times_prediction"/>
+        <Individual URI="&modules;rt4_1"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;rt4_1"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;Retention_times_prediction"/>
+        <Individual URI="&modules;rt4_2"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;rt4_2"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;Retention_times_prediction"/>
+        <Individual URI="&modules;rt4_3"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;rt4_3"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;Retention_times_prediction"/>
+        <Individual URI="&modules;rt4_4"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;rt4_4"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;Retention_times_prediction"/>
+        <Individual URI="&modules;rt4_5"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;rt4_5"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;Retention_times_prediction"/>
+        <Individual URI="&modules;rt4_6"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;rt4_6"/>
     </Declaration>
 </Ontology>
 

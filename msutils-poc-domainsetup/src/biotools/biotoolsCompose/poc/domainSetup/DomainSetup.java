@@ -55,9 +55,6 @@ public class DomainSetup {
 	private static OWLDataFactory edamDataFactory;
 
 	public static void main(String[] args) throws OntEDException, IOException, OntEDMissingImportException {
-		// set path to EDAM, CSV file with annotations, PROPHETS project
-		// directory
-		// (TODO: read local paths from command line)
 
 		String projectdir = args[0];
 		String csvfile = args[1];

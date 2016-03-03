@@ -122,6 +122,20 @@
     <staticParameters/>
   </module>
   <module>
+    <sibUID>biotoolsCompose/demo-sibs/rt4</sibUID>
+    <outputTypes>
+      <string>TSV</string>
+    </outputTypes>
+    <inputTypes>
+      <string>pepXML</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>rt4_5</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
     <sibUID>biotoolsCompose/demo-sibs/LoadMGFData</sibUID>
     <outputTypes>
       <string>MGF</string>
@@ -130,6 +144,48 @@
     <killedTypes/>
     <branch>default</branch>
     <displayName>LoadMGFData</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/rt4</sibUID>
+    <outputTypes>
+      <string>XML</string>
+    </outputTypes>
+    <inputTypes>
+      <string>pepXML</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>rt4_6</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/rt4</sibUID>
+    <outputTypes>
+      <string>XML</string>
+    </outputTypes>
+    <inputTypes>
+      <string>mzIdentML</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>rt4_4</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/rt4</sibUID>
+    <outputTypes>
+      <string>TSV</string>
+    </outputTypes>
+    <inputTypes>
+      <string>mzIdentML</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>rt4_3</displayName>
     <typeToParameter/>
     <staticParameters/>
   </module>
@@ -162,6 +218,34 @@
     <staticParameters/>
   </module>
   <module>
+    <sibUID>biotoolsCompose/demo-sibs/rt4</sibUID>
+    <outputTypes>
+      <string>XML</string>
+    </outputTypes>
+    <inputTypes>
+      <string>TSV</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>rt4_2</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/rt</sibUID>
+    <outputTypes>
+      <string>Textual_format</string>
+    </outputTypes>
+    <inputTypes>
+      <string>TSV</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>rt</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
     <sibUID>biotoolsCompose/demo-sibs/Pep3D</sibUID>
     <outputTypes>
       <string>PNG</string>
@@ -190,16 +274,16 @@
     <staticParameters/>
   </module>
   <module>
-    <sibUID>biotoolsCompose/demo-sibs/rt3</sibUID>
+    <sibUID>biotoolsCompose/demo-sibs/rt4</sibUID>
     <outputTypes>
-      <string>Textual_format</string>
+      <string>TSV</string>
     </outputTypes>
     <inputTypes>
-      <string>Textual_format</string>
+      <string>TSV</string>
     </inputTypes>
     <killedTypes/>
     <branch>default</branch>
-    <displayName>rt3</displayName>
+    <displayName>rt4_1</displayName>
     <typeToParameter/>
     <staticParameters/>
   </module>
@@ -356,6 +440,20 @@
     <staticParameters/>
   </module>
   <module>
+    <sibUID>biotoolsCompose/demo-sibs/idconvert</sibUID>
+    <outputTypes>
+      <string>TSV</string>
+    </outputTypes>
+    <inputTypes>
+      <string>TSV</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>idconvert_1</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
     <sibUID>biotoolsCompose/demo-sibs/LoadNetCDFData</sibUID>
     <outputTypes>
       <string>netCDF</string>
@@ -378,6 +476,48 @@
     <killedTypes/>
     <branch>default</branch>
     <displayName>msconvert_6</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/idconvert</sibUID>
+    <outputTypes>
+      <string>TSV</string>
+    </outputTypes>
+    <inputTypes>
+      <string>XML</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>idconvert_3</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/idconvert</sibUID>
+    <outputTypes>
+      <string>XML</string>
+    </outputTypes>
+    <inputTypes>
+      <string>TSV</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>idconvert_2</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/idconvert</sibUID>
+    <outputTypes>
+      <string>XML</string>
+    </outputTypes>
+    <inputTypes>
+      <string>XML</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>idconvert_4</displayName>
     <typeToParameter/>
     <staticParameters/>
   </module>
