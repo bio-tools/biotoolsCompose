@@ -1,0 +1,45 @@
+#!/bin/bash
+
+# had to delete file run01 as something happened with the index
+# renamed the files with "rename '.raw.-1' '' *mgf"
+
+
+
+# convert files
+for file in "../iPRG*.mgf"
+do
+    mv $file  
+    echo $file.mzML
+    msconvert --mzML "$file" -o "./"
+done
+
+
+rm *.pep.xml
+
+# run comet on mzml
+((i = 0))
+for file in *.mzML
+do
+    echo $file
+    ((i++))
+	
+    comet -Pcomet_mods.params -N"$file" -D"../ABRF_iPRG_2012_target.fasta" "$file"
+#    mv temp.pep.xml "$file.pep.xml"
+done
+
+for file in iPRG*.pep.xml
+do
+    while IFS= read -r line; do     if [[ "$line" =~ "index=" ]]; then count=$(echo "$line" | grep -o -E index=[0-9]+ | grep -o -E [0-9]+); count2=$((count+1)); echo "$line" | sed s/index=${count}/index=${count2}/; else echo $line; fi; done < "$file" > test.pep.xml
+    mv test.pep.xml "$file"
+done
+
+
+
+
+
+# peptideProphet 
+xinteract -N"CometOut.interact.pep.xml" -dDECOY_ -p0.05 -l7 -iP -PPM -OH -Op *.pep.xml -M-STY:79.96633,M:15.9949,KR:14.0157,KR:28.0313,K:42.04695,Y:79.956815,K:42.010565-MZTOL=0.1-PPMTOL=50
+
+#  convert pepxml file to csv using protk package (https://github.com/iracooke/protk) 
+pepxml_to_table.rb CometOut.interact.pep.xml -o CometOut.interact.pep.csv
+pepxml_to_table.rb CometOut.interact.ptm.ipro.pep.xml -o CometOut.interact.ptm.pep.csv

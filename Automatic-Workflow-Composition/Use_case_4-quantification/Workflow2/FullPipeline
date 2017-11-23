@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# convert files to mzML
+for file in "../iT*.mgf"
+do
+    msconvert --mzML "$file" -o "./"
+done
+
+# run comet on mzml
+((i = 0))
+for file in *.mzML
+do
+    echo $file
+    ((i++))
+    comet -Pcomet_iTRAQ.params -Nout"$file" -D"../swissprotHuman.fasta" "$file"
+done
+# Change "index=n" to "index=n+1" to orrect wrong ID assignment PeptideProphet
+for file in out*.pep.xml
+do
+    while IFS= read -r line; do     if [[ "$line" =~ "index=" ]]; then count=$(echo "$line" | grep -o -E index=[0-9]+ | grep -o -E [0-9]+); count2=$((count+1)); echo "$line" | sed s/index=${count}/index=${count2}/; else echo $line; fi; done < "$file" > test.pep.xml
+    mv test.pep.xml "$file"
+done
+
+# apply peptideProphet + Libra
+xinteract -N"iTRAQ_full.interact.pep.xml" -+0.05 -dDECOY_ -l7 -iP -PPM -OH -pO ./*.pep.xml -Llibra_condition.xml -Op #STY,79.966331-MZTOL=0.05 -M-STY,79.966331-M,15.9949-n,42.010565-KnY,144.102062-MZTOL=0.05
+
+
+# For extraction of data, see R script in work package 1
+
+
+
+

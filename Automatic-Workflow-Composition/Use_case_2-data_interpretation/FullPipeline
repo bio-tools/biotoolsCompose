@@ -1,0 +1,68 @@
+#!/bin/bash
+
+# Download raw files
+wget -rv -A "*mgf" "ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2014/03/PXD000618/"
+mv ftp.pride.ebi.ac.uk/pride/data/archive/2014/03/PXD000618/* .
+
+# convert files to mzML
+for file in "*.mgf"
+do
+    /usr/local/tpp/bin/msconvert --mzML "$file" -o "./" 
+done
+
+# run comet on mzml + peptideProphet + proteinProphet
+((i = 0))
+for file in *.mzML
+do
+    echo $file
+    ((i++))
+    /usr/local/tpp/bin/comet -Pcomet.params -N"$file" -D"up000005640.fasta" "$file"
+    /usr/local/tpp/bin/xinteract -N${file}_interact -p0.8 -l7 -PPM -OH $file.pep.xml
+    /usr/local/tpp/bin/ProteinProphet interact-${file}_interact.pep.xml $file.prot.xml MINPROB=0.95
+done
+
+# get uniprot accession names from  prot.xml files with assigned probability 1.000
+rm UniprotAccs.txt UniprotIDs.txt
+for file in *.prot.xml
+do
+    grep '<protein protein' $file | grep 'probability=\"1.0' - | grep -o '<protein protein_name=\"[a-z]*|[A-Z,0-9]*' - | grep -o '[A-Z,0-9]*' >> UniprotAccs.txt
+grep '<protein protein' $file | grep 'probability=\"1.0' - | grep -o '<protein protein_name=\"[a-z]*|[A-Z,0-9]*|[A-Z,0-9]*_[A-Z]*' - | grep -o '[A-Z,0-9]*_[A-Z]\{1,\}' >> UniprotIDs.txt
+done
+# remove multiple entries and reduce to the first 500 entries
+awk '!a[$0]++' UniprotAccs.txt > t
+mv t  UniprotAccs.txt
+awk '!a[$0]++' UniprotIDs.txt > t
+mv  t  UniprotIDs.txt
+
+#tr '\n' ','  < UniprotAccs.txt > UniprotAccsComma.txt
+tr '\n' ','  < UniprotIDs.txt > UniprotIDsComma.txt
+sed ':a;N;$!ba;s/\n/%0D%0A/g' UniprotAccs.txt > UniprotAccsGeneTrail.txt
+
+
+# run different data interpretation tools
+# GeneTrail
+curl http://genetrail2.bioinf.uni-sb.de/api/session | grep -o '[a-z,0-9,-]*' - | tail -n1 > session
+session=$(cat session)
+curl -X POST "http://genetrail2.bioinf.uni-sb.de/api/upload/?session={$session}" -H "Accept: application/json" -H "Content-Type: application/x-www-form-urlencoded" -d "value=$(cat UniprotAccsGeneTrail.txt)" > tjob
+cat tjob | grep -o '"result":{"id":[0-9]*' - | grep -o '[0-9]*' > job
+job=$(cat job)
+curl -X POST "http://genetrail2.bioinf.uni-sb.de/api/job/setup/gsea?session={$session}" -H "Accept: application/json" -H "Content-Type: application/x-www-form-urlencoded" -d "significance=0.05&adjustment=benjamini_hochberg&categories=%5B%229606-protein-consensuspathdb-kegg%22%5D&minimum=5&maximum=500&adjustSeparately=false&input=$job"
+curl "http://genetrail2.bioinf.uni-sb.de/api/job/start?session={$session}"
+sleep 100
+curl "http://genetrail2.bioinf.uni-sb.de/api/job/query?session={$session}" > tquery
+cat tquery | grep -o '"enrichment":{"id":[0-9]*' - | grep -o '[0-9]*' > query
+query=$(cat query)
+curl "http://genetrail2.bioinf.uni-sb.de/api/resource/{$query}/download/?session={$session}" --output GeneTrailResults.zip
+unzip GeneTrailResults.zip
+
+# EnrichNet
+curl "http://www.enrichnet.org/index.php?genestr=$(cat UniprotIDsComma.txt)&idtype=uniprot_swissprot&pathdb=kegg&graph=string" > url
+sed 's/\/enrichnet//' url > turl
+mv turl url
+echo "EnrichNet: Open the following link to see the results: $(cat url)"
+
+# gProfiler
+R CMD BATCH getgProfileRResults.R
+
+
+
