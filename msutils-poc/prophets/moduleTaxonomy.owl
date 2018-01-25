@@ -50,13 +50,6 @@
         <OWLClass URI="&modules;Analysis"/>
     </Declaration>
     <SubClassOf>
-        <OWLClass URI="&modules;Blind_peptide_database_search"/>
-        <OWLClass URI="&modules;Peptide_database_search"/>
-    </SubClassOf>
-    <Declaration>
-        <OWLClass URI="&modules;Blind_peptide_database_search"/>
-    </Declaration>
-    <SubClassOf>
         <OWLClass URI="&modules;Calculation"/>
         <OWLClass URI="&modules;Operation"/>
     </SubClassOf>
@@ -69,6 +62,27 @@
     </SubClassOf>
     <Declaration>
         <OWLClass URI="&modules;Chromatogram_visualisation"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&modules;Comet"/>
+        <OWLClass URI="&modules;Peptide_database_search"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&modules;Comet"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&modules;CompassXport"/>
+        <OWLClass URI="&modules;Formatting"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&modules;CompassXport"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&modules;Conversion"/>
+        <OWLClass URI="&modules;Operation"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&modules;Conversion"/>
     </Declaration>
     <SubClassOf>
         <OWLClass URI="&modules;Data_handling"/>
@@ -92,11 +106,103 @@
         <OWLClass URI="&modules;Formatting"/>
     </Declaration>
     <SubClassOf>
+        <OWLClass URI="&modules;Gene-set_enrichment_analysis"/>
+        <OWLClass URI="&modules;Gene_expression_analysis"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&modules;Gene-set_enrichment_analysis"/>
+        <OWLClass URI="&modules;Gene_set_testing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&modules;Gene-set_enrichment_analysis"/>
+        <OWLClass URI="&modules;Over-representation_analysis"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&modules;Gene-set_enrichment_analysis"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&modules;Gene_expression_analysis"/>
+        <OWLClass URI="&modules;Analysis"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&modules;Gene_expression_analysis"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&modules;Gene_set_testing"/>
+        <OWLClass URI="&modules;Gene_expression_analysis"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&modules;Gene_set_testing"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&modules;Labeled_quantification"/>
+        <OWLClass URI="&modules;Protein_quantification"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&modules;Labeled_quantification"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&modules;Libra"/>
+        <OWLClass URI="&modules;iTRAQ"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&modules;Libra"/>
+    </Declaration>
+    <SubClassOf>
         <OWLClass URI="&modules;Operation"/>
         <OWLClass URI="&owl;Thing"/>
     </SubClassOf>
     <Declaration>
         <OWLClass URI="&modules;Operation"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&modules;Over-representation_analysis"/>
+        <OWLClass URI="&modules;Analysis"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&modules;Over-representation_analysis"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&modules;PTM_identification"/>
+        <OWLClass URI="&modules;Peptide_identification"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&modules;PTM_identification"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&modules;PTM_localisation"/>
+        <OWLClass URI="&modules;PTM_identification"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&modules;PTM_localisation"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&modules;Pep3D"/>
+        <OWLClass URI="&modules;Chromatogram_visualisation"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&modules;Pep3D"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&modules;PeptideProphet"/>
+        <OWLClass URI="&modules;Validation_of_peptide-spectrum_matches"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&modules;PeptideProphet"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&modules;PeptideShaker_PTMI"/>
+        <OWLClass URI="&modules;PTM_identification"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&modules;PeptideShaker_PTMI"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&modules;PeptideShaker_VPSM"/>
+        <OWLClass URI="&modules;Validation_of_peptide-spectrum_matches"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&modules;PeptideShaker_VPSM"/>
     </Declaration>
     <SubClassOf>
         <OWLClass URI="&modules;Peptide_database_search"/>
@@ -117,18 +223,50 @@
         <OWLClass URI="&modules;Peptide_identification"/>
     </Declaration>
     <SubClassOf>
-        <OWLClass URI="&modules;Query_and_retrieval"/>
+        <OWLClass URI="&modules;Protein_quantification"/>
+        <OWLClass URI="&modules;Quantification"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&modules;Protein_quantification"/>
+        <OWLClass URI="&modules;Spectral_analysis"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&modules;Protein_quantification"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&modules;Quantification"/>
         <OWLClass URI="&modules;Operation"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&modules;Quantification"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&modules;Query_and_retrieval"/>
+        <OWLClass URI="&modules;Data_handling"/>
     </SubClassOf>
     <Declaration>
         <OWLClass URI="&modules;Query_and_retrieval"/>
     </Declaration>
     <SubClassOf>
-        <OWLClass URI="&modules;Retention_times_prediction"/>
+        <OWLClass URI="&modules;Retention_time_prediction"/>
         <OWLClass URI="&modules;Calculation"/>
     </SubClassOf>
     <Declaration>
-        <OWLClass URI="&modules;Retention_times_prediction"/>
+        <OWLClass URI="&modules;Retention_time_prediction"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&modules;SSRCalc"/>
+        <OWLClass URI="&modules;Retention_time_prediction"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&modules;SSRCalc"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&modules;SearchGUI"/>
+        <OWLClass URI="&modules;Peptide_database_search"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&modules;SearchGUI"/>
     </Declaration>
     <SubClassOf>
         <OWLClass URI="&modules;Spectral_analysis"/>
@@ -162,6 +300,62 @@
     <Declaration>
         <OWLClass URI="&modules;Visualisation"/>
     </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&modules;X!Tandem"/>
+        <OWLClass URI="&modules;Peptide_database_search"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&modules;X!Tandem"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&modules;iTRAQ"/>
+        <OWLClass URI="&modules;Labeled_quantification"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&modules;iTRAQ"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&modules;idconvert"/>
+        <OWLClass URI="&modules;Conversion"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&modules;idconvert"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&modules;isobar"/>
+        <OWLClass URI="&modules;iTRAQ"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&modules;isobar"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&modules;msconvert"/>
+        <OWLClass URI="&modules;Formatting"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&modules;msconvert"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&modules;rt"/>
+        <OWLClass URI="&modules;Retention_time_prediction"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&modules;rt"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&modules;rt4"/>
+        <OWLClass URI="&modules;Retention_time_prediction"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&modules;rt4"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&modules;xml2tsv"/>
+        <OWLClass URI="&modules;Conversion"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&modules;xml2tsv"/>
+    </Declaration>
     <Declaration>
         <DataProperty URI="&properties;branchName"/>
     </Declaration>
@@ -169,194 +363,424 @@
         <DataProperty URI="&properties;sibUID"/>
     </Declaration>
     <ClassAssertion>
-        <OWLClass URI="&modules;Blind_peptide_database_search"/>
-        <Individual URI="&modules;Comet"/>
+        <OWLClass URI="&modules;Comet"/>
+        <Individual URI="&modules;Comet_(format_3244-format_3655)"/>
     </ClassAssertion>
     <Declaration>
-        <Individual URI="&modules;Comet"/>
+        <Individual URI="&modules;Comet_(format_3244-format_3655)"/>
     </Declaration>
     <ClassAssertion>
-        <OWLClass URI="&modules;Formatting"/>
-        <Individual URI="&modules;CompassXport_1"/>
+        <OWLClass URI="&modules;Comet"/>
+        <Individual URI="&modules;Comet_(format_3654-format_3655)"/>
     </ClassAssertion>
     <Declaration>
-        <Individual URI="&modules;CompassXport_1"/>
+        <Individual URI="&modules;Comet_(format_3654-format_3655)"/>
     </Declaration>
     <ClassAssertion>
-        <OWLClass URI="&modules;Formatting"/>
-        <Individual URI="&modules;CompassXport_2"/>
+        <OWLClass URI="&modules;CompassXport"/>
+        <Individual URI="&modules;CompassXport_(format_3244-format_3244)"/>
     </ClassAssertion>
     <Declaration>
-        <Individual URI="&modules;CompassXport_2"/>
+        <Individual URI="&modules;CompassXport_(format_3244-format_3244)"/>
     </Declaration>
     <ClassAssertion>
-        <OWLClass URI="&modules;Formatting"/>
-        <Individual URI="&modules;CompassXport_3"/>
+        <OWLClass URI="&modules;CompassXport"/>
+        <Individual URI="&modules;CompassXport_(format_3244-format_3654)"/>
     </ClassAssertion>
     <Declaration>
-        <Individual URI="&modules;CompassXport_3"/>
+        <Individual URI="&modules;CompassXport_(format_3244-format_3654)"/>
     </Declaration>
     <ClassAssertion>
-        <OWLClass URI="&modules;Formatting"/>
-        <Individual URI="&modules;CompassXport_4"/>
+        <OWLClass URI="&modules;CompassXport"/>
+        <Individual URI="&modules;CompassXport_(format_3651-format_3244)"/>
     </ClassAssertion>
     <Declaration>
-        <Individual URI="&modules;CompassXport_4"/>
+        <Individual URI="&modules;CompassXport_(format_3651-format_3244)"/>
     </Declaration>
     <ClassAssertion>
-        <OWLClass URI="&modules;Formatting"/>
-        <Individual URI="&modules;CompassXport_5"/>
+        <OWLClass URI="&modules;CompassXport"/>
+        <Individual URI="&modules;CompassXport_(format_3651-format_3654)"/>
     </ClassAssertion>
     <Declaration>
-        <Individual URI="&modules;CompassXport_5"/>
+        <Individual URI="&modules;CompassXport_(format_3651-format_3654)"/>
     </Declaration>
     <ClassAssertion>
-        <OWLClass URI="&modules;Formatting"/>
-        <Individual URI="&modules;CompassXport_6"/>
+        <OWLClass URI="&modules;CompassXport"/>
+        <Individual URI="&modules;CompassXport_(format_3654-format_3244)"/>
     </ClassAssertion>
     <Declaration>
-        <Individual URI="&modules;CompassXport_6"/>
-    </Declaration>
-    <Declaration>
-        <Individual URI="&modules;LoadMGFData"/>
-    </Declaration>
-    <Declaration>
-        <Individual URI="&modules;LoadMzMLData"/>
-    </Declaration>
-    <Declaration>
-        <Individual URI="&modules;LoadNetCDFData"/>
+        <Individual URI="&modules;CompassXport_(format_3654-format_3244)"/>
     </Declaration>
     <ClassAssertion>
-        <OWLClass URI="&modules;Chromatogram_visualisation"/>
-        <Individual URI="&modules;Pep3D_1"/>
+        <OWLClass URI="&modules;CompassXport"/>
+        <Individual URI="&modules;CompassXport_(format_3654-format_3654)"/>
     </ClassAssertion>
     <Declaration>
-        <Individual URI="&modules;Pep3D_1"/>
+        <Individual URI="&modules;CompassXport_(format_3654-format_3654)"/>
     </Declaration>
     <ClassAssertion>
-        <OWLClass URI="&modules;Chromatogram_visualisation"/>
-        <Individual URI="&modules;Pep3D_2"/>
+        <OWLClass URI="&modules;Gene-set_enrichment_analysis"/>
+        <Individual URI="&modules;EnrichNet"/>
     </ClassAssertion>
     <Declaration>
-        <Individual URI="&modules;Pep3D_2"/>
+        <Individual URI="&modules;EnrichNet"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;Gene-set_enrichment_analysis"/>
+        <Individual URI="&modules;GeneTrail"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;GeneTrail"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;Gene-set_enrichment_analysis"/>
+        <Individual URI="&modules;GeneTrail2"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;GeneTrail2"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;Libra"/>
+        <Individual URI="&modules;Libra_(format_3655-format_3247)"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;Libra_(format_3655-format_3247)"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;Libra"/>
+        <Individual URI="&modules;Libra_(format_3655-format_3475)"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;Libra_(format_3655-format_3475)"/>
+    </Declaration>
+    <Declaration>
+        <Individual URI="&modules;Load_MSData_ThermoRAW"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;PTM_localisation"/>
+        <Individual URI="&modules;PTMProphet"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;PTMProphet"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;Pep3D"/>
+        <Individual URI="&modules;Pep3D_(format_3244-format_3603)"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;Pep3D_(format_3244-format_3603)"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;Pep3D"/>
+        <Individual URI="&modules;Pep3D_(format_3654-format_3603)"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;Pep3D_(format_3654-format_3603)"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;PeptideProphet"/>
+        <Individual URI="&modules;PeptideProphet_(format_3247-format_3655)"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;PeptideProphet_(format_3247-format_3655)"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;PeptideProphet"/>
+        <Individual URI="&modules;PeptideProphet_(format_3655-format_3655)"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;PeptideProphet_(format_3655-format_3655)"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;PeptideShaker_PTMI"/>
+        <Individual URI="&modules;PeptideShaker_PTMI_(format_3247-format_3247)"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;PeptideShaker_PTMI_(format_3247-format_3247)"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;PeptideShaker_PTMI"/>
+        <Individual URI="&modules;PeptideShaker_PTMI_(format_3247-format_3475)"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;PeptideShaker_PTMI_(format_3247-format_3475)"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;PeptideShaker_PTMI"/>
+        <Individual URI="&modules;PeptideShaker_PTMI_(format_3247-format_3655)"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;PeptideShaker_PTMI_(format_3247-format_3655)"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;PeptideShaker_VPSM"/>
+        <Individual URI="&modules;PeptideShaker_VPSM_(format_3247-format_3247)"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;PeptideShaker_VPSM_(format_3247-format_3247)"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;PeptideShaker_VPSM"/>
+        <Individual URI="&modules;PeptideShaker_VPSM_(format_3247-format_3475)"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;PeptideShaker_VPSM_(format_3247-format_3475)"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;PeptideShaker_VPSM"/>
+        <Individual URI="&modules;PeptideShaker_VPSM_(format_3247-format_3655)"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;PeptideShaker_VPSM_(format_3247-format_3655)"/>
     </Declaration>
     <ClassAssertion>
         <OWLClass URI="&modules;Validation_of_peptide-spectrum_matches"/>
-        <Individual URI="&modules;PeptideProphet"/>
+        <Individual URI="&modules;ProteinProphet"/>
     </ClassAssertion>
     <Declaration>
-        <Individual URI="&modules;PeptideProphet"/>
+        <Individual URI="&modules;ProteinProphet"/>
     </Declaration>
     <ClassAssertion>
-        <OWLClass URI="&modules;Retention_times_prediction"/>
-        <Individual URI="&modules;SSRCalc"/>
+        <OWLClass URI="&modules;SSRCalc"/>
+        <Individual URI="&modules;SSRCalc_(format_2330-format_2330)"/>
     </ClassAssertion>
     <Declaration>
-        <Individual URI="&modules;SSRCalc"/>
-    </Declaration>
-    <Declaration>
-        <Individual URI="&modules;ShowPng"/>
-    </Declaration>
-    <Declaration>
-        <Individual URI="&modules;ShowTextualFormat"/>
+        <Individual URI="&modules;SSRCalc_(format_2330-format_2330)"/>
     </Declaration>
     <ClassAssertion>
-        <OWLClass URI="&modules;Blind_peptide_database_search"/>
-        <Individual URI="&modules;X!Tandem"/>
+        <OWLClass URI="&modules;SSRCalc"/>
+        <Individual URI="&modules;SSRCalc_(format_3475-format_2330)"/>
     </ClassAssertion>
     <Declaration>
-        <Individual URI="&modules;X!Tandem"/>
+        <Individual URI="&modules;SSRCalc_(format_3475-format_2330)"/>
     </Declaration>
     <ClassAssertion>
-        <OWLClass URI="&modules;Formatting"/>
-        <Individual URI="&modules;idconvert_1"/>
+        <OWLClass URI="&modules;SearchGUI"/>
+        <Individual URI="&modules;SearchGUI_(format_1929-format_3247)"/>
     </ClassAssertion>
     <Declaration>
-        <Individual URI="&modules;idconvert_1"/>
+        <Individual URI="&modules;SearchGUI_(format_1929-format_3247)"/>
     </Declaration>
     <ClassAssertion>
-        <OWLClass URI="&modules;Formatting"/>
-        <Individual URI="&modules;idconvert_2"/>
+        <OWLClass URI="&modules;SearchGUI"/>
+        <Individual URI="&modules;SearchGUI_(format_1929-format_3655)"/>
     </ClassAssertion>
     <Declaration>
-        <Individual URI="&modules;idconvert_2"/>
+        <Individual URI="&modules;SearchGUI_(format_1929-format_3655)"/>
     </Declaration>
     <ClassAssertion>
-        <OWLClass URI="&modules;Formatting"/>
-        <Individual URI="&modules;idconvert_3"/>
+        <OWLClass URI="&modules;SearchGUI"/>
+        <Individual URI="&modules;SearchGUI_(format_3651-format_3247)"/>
     </ClassAssertion>
     <Declaration>
-        <Individual URI="&modules;idconvert_3"/>
+        <Individual URI="&modules;SearchGUI_(format_3651-format_3247)"/>
     </Declaration>
     <ClassAssertion>
-        <OWLClass URI="&modules;Formatting"/>
-        <Individual URI="&modules;idconvert_4"/>
+        <OWLClass URI="&modules;SearchGUI"/>
+        <Individual URI="&modules;SearchGUI_(format_3651-format_3655)"/>
     </ClassAssertion>
     <Declaration>
-        <Individual URI="&modules;idconvert_4"/>
+        <Individual URI="&modules;SearchGUI_(format_3651-format_3655)"/>
+    </Declaration>
+    <Declaration>
+        <Individual URI="&modules;Show_AminoAcidIndex_hydropathy"/>
+    </Declaration>
+    <Declaration>
+        <Individual URI="&modules;Show_AnyFile"/>
+    </Declaration>
+    <Declaration>
+        <Individual URI="&modules;Show_GeneExpressionProfile"/>
+    </Declaration>
+    <Declaration>
+        <Individual URI="&modules;Show_KEGGPathwayIDs"/>
+    </Declaration>
+    <Declaration>
+        <Individual URI="&modules;Show_PathwayOrNetwork"/>
+    </Declaration>
+    <Declaration>
+        <Individual URI="&modules;Show_ProteinIdentification"/>
     </Declaration>
     <ClassAssertion>
-        <OWLClass URI="&modules;Formatting"/>
-        <Individual URI="&modules;msconvert_1"/>
+        <OWLClass URI="&modules;Conversion"/>
+        <Individual URI="&modules;Tandem2XML"/>
     </ClassAssertion>
     <Declaration>
-        <Individual URI="&modules;msconvert_1"/>
+        <Individual URI="&modules;Tandem2XML"/>
     </Declaration>
     <ClassAssertion>
-        <OWLClass URI="&modules;Formatting"/>
-        <Individual URI="&modules;msconvert_2"/>
+        <OWLClass URI="&modules;X!Tandem"/>
+        <Individual URI="&modules;X!Tandem_(format_3244-format_3247)"/>
     </ClassAssertion>
     <Declaration>
-        <Individual URI="&modules;msconvert_2"/>
+        <Individual URI="&modules;X!Tandem_(format_3244-format_3247)"/>
     </Declaration>
     <ClassAssertion>
-        <OWLClass URI="&modules;Formatting"/>
-        <Individual URI="&modules;msconvert_3"/>
+        <OWLClass URI="&modules;X!Tandem"/>
+        <Individual URI="&modules;X!Tandem_(format_3244-format_3711)"/>
     </ClassAssertion>
     <Declaration>
-        <Individual URI="&modules;msconvert_3"/>
+        <Individual URI="&modules;X!Tandem_(format_3244-format_3711)"/>
     </Declaration>
     <ClassAssertion>
-        <OWLClass URI="&modules;Formatting"/>
-        <Individual URI="&modules;msconvert_4"/>
+        <OWLClass URI="&modules;Conversion"/>
+        <Individual URI="&modules;extract_protein_names"/>
     </ClassAssertion>
     <Declaration>
-        <Individual URI="&modules;msconvert_4"/>
+        <Individual URI="&modules;extract_protein_names"/>
     </Declaration>
     <ClassAssertion>
-        <OWLClass URI="&modules;Formatting"/>
-        <Individual URI="&modules;msconvert_5"/>
+        <OWLClass URI="&modules;Gene-set_enrichment_analysis"/>
+        <Individual URI="&modules;gProfiler"/>
     </ClassAssertion>
     <Declaration>
-        <Individual URI="&modules;msconvert_5"/>
+        <Individual URI="&modules;gProfiler"/>
     </Declaration>
     <ClassAssertion>
-        <OWLClass URI="&modules;Formatting"/>
-        <Individual URI="&modules;msconvert_6"/>
+        <OWLClass URI="&modules;idconvert"/>
+        <Individual URI="&modules;idconvert_(format_3247-format_3247)"/>
     </ClassAssertion>
     <Declaration>
-        <Individual URI="&modules;msconvert_6"/>
+        <Individual URI="&modules;idconvert_(format_3247-format_3247)"/>
     </Declaration>
     <ClassAssertion>
-        <OWLClass URI="&modules;Formatting"/>
-        <Individual URI="&modules;msconvert_7"/>
+        <OWLClass URI="&modules;idconvert"/>
+        <Individual URI="&modules;idconvert_(format_3247-format_3655)"/>
     </ClassAssertion>
     <Declaration>
-        <Individual URI="&modules;msconvert_7"/>
+        <Individual URI="&modules;idconvert_(format_3247-format_3655)"/>
     </Declaration>
     <ClassAssertion>
-        <OWLClass URI="&modules;Formatting"/>
-        <Individual URI="&modules;msconvert_8"/>
+        <OWLClass URI="&modules;idconvert"/>
+        <Individual URI="&modules;idconvert_(format_3655-format_3247)"/>
     </ClassAssertion>
     <Declaration>
-        <Individual URI="&modules;msconvert_8"/>
+        <Individual URI="&modules;idconvert_(format_3655-format_3247)"/>
     </Declaration>
     <ClassAssertion>
-        <OWLClass URI="&modules;Formatting"/>
-        <Individual URI="&modules;msconvert_9"/>
+        <OWLClass URI="&modules;idconvert"/>
+        <Individual URI="&modules;idconvert_(format_3655-format_3655)"/>
     </ClassAssertion>
     <Declaration>
-        <Individual URI="&modules;msconvert_9"/>
+        <Individual URI="&modules;idconvert_(format_3655-format_3655)"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;idconvert"/>
+        <Individual URI="&modules;idconvert_(format_3747-format_3247)"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;idconvert_(format_3747-format_3247)"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;idconvert"/>
+        <Individual URI="&modules;idconvert_(format_3747-format_3655)"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;idconvert_(format_3747-format_3655)"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;isobar"/>
+        <Individual URI="&modules;isobar_(format_3475-format_3508)"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;isobar_(format_3475-format_3508)"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;isobar"/>
+        <Individual URI="&modules;isobar_(format_3651-format_3508)"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;isobar_(format_3651-format_3508)"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;isobar"/>
+        <Individual URI="&modules;isobar_(format_3752-format_3508)"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;isobar_(format_3752-format_3508)"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;msconvert"/>
+        <Individual URI="&modules;msconvert_(format_3244-format_3244)"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;msconvert_(format_3244-format_3244)"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;msconvert"/>
+        <Individual URI="&modules;msconvert_(format_3244-format_3651)"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;msconvert_(format_3244-format_3651)"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;msconvert"/>
+        <Individual URI="&modules;msconvert_(format_3244-format_3654)"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;msconvert_(format_3244-format_3654)"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;msconvert"/>
+        <Individual URI="&modules;msconvert_(format_3651-format_3244)"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;msconvert_(format_3651-format_3244)"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;msconvert"/>
+        <Individual URI="&modules;msconvert_(format_3651-format_3651)"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;msconvert_(format_3651-format_3651)"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;msconvert"/>
+        <Individual URI="&modules;msconvert_(format_3651-format_3654)"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;msconvert_(format_3651-format_3654)"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;msconvert"/>
+        <Individual URI="&modules;msconvert_(format_3654-format_3244)"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;msconvert_(format_3654-format_3244)"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;msconvert"/>
+        <Individual URI="&modules;msconvert_(format_3654-format_3651)"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;msconvert_(format_3654-format_3651)"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;msconvert"/>
+        <Individual URI="&modules;msconvert_(format_3654-format_3654)"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;msconvert_(format_3654-format_3654)"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;msconvert"/>
+        <Individual URI="&modules;msconvert_(format_3712-format_3244)"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;msconvert_(format_3712-format_3244)"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;msconvert"/>
+        <Individual URI="&modules;msconvert_(format_3712-format_3651)"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;msconvert_(format_3712-format_3651)"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;msconvert"/>
+        <Individual URI="&modules;msconvert_(format_3712-format_3654)"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;msconvert_(format_3712-format_3654)"/>
     </Declaration>
     <ClassAssertion>
         <OWLClass URI="&modules;Chromatogram_visualisation"/>
@@ -366,53 +790,67 @@
         <Individual URI="&modules;mzXMLplot"/>
     </Declaration>
     <ClassAssertion>
-        <OWLClass URI="&modules;Retention_times_prediction"/>
-        <Individual URI="&modules;rt"/>
+        <OWLClass URI="&modules;Formatting"/>
+        <Individual URI="&modules;protk"/>
     </ClassAssertion>
     <Declaration>
-        <Individual URI="&modules;rt"/>
+        <Individual URI="&modules;protk"/>
     </Declaration>
     <ClassAssertion>
-        <OWLClass URI="&modules;Retention_times_prediction"/>
-        <Individual URI="&modules;rt4_1"/>
+        <OWLClass URI="&modules;rt4"/>
+        <Individual URI="&modules;rt4_(format_3475-format_2332)"/>
     </ClassAssertion>
     <Declaration>
-        <Individual URI="&modules;rt4_1"/>
+        <Individual URI="&modules;rt4_(format_3475-format_2332)"/>
     </Declaration>
     <ClassAssertion>
-        <OWLClass URI="&modules;Retention_times_prediction"/>
-        <Individual URI="&modules;rt4_2"/>
+        <OWLClass URI="&modules;rt4"/>
+        <Individual URI="&modules;rt4_(format_3475-format_3475)"/>
     </ClassAssertion>
     <Declaration>
-        <Individual URI="&modules;rt4_2"/>
+        <Individual URI="&modules;rt4_(format_3475-format_3475)"/>
     </Declaration>
     <ClassAssertion>
-        <OWLClass URI="&modules;Retention_times_prediction"/>
-        <Individual URI="&modules;rt4_3"/>
+        <OWLClass URI="&modules;rt4"/>
+        <Individual URI="&modules;rt4_(format_3655-format_2332)"/>
     </ClassAssertion>
     <Declaration>
-        <Individual URI="&modules;rt4_3"/>
+        <Individual URI="&modules;rt4_(format_3655-format_2332)"/>
     </Declaration>
     <ClassAssertion>
-        <OWLClass URI="&modules;Retention_times_prediction"/>
-        <Individual URI="&modules;rt4_4"/>
+        <OWLClass URI="&modules;rt4"/>
+        <Individual URI="&modules;rt4_(format_3655-format_3475)"/>
     </ClassAssertion>
     <Declaration>
-        <Individual URI="&modules;rt4_4"/>
+        <Individual URI="&modules;rt4_(format_3655-format_3475)"/>
     </Declaration>
     <ClassAssertion>
-        <OWLClass URI="&modules;Retention_times_prediction"/>
-        <Individual URI="&modules;rt4_5"/>
+        <OWLClass URI="&modules;rt"/>
+        <Individual URI="&modules;rt_(format_3475-format_2330)"/>
     </ClassAssertion>
     <Declaration>
-        <Individual URI="&modules;rt4_5"/>
+        <Individual URI="&modules;rt_(format_3475-format_2330)"/>
     </Declaration>
     <ClassAssertion>
-        <OWLClass URI="&modules;Retention_times_prediction"/>
-        <Individual URI="&modules;rt4_6"/>
+        <OWLClass URI="&modules;rt"/>
+        <Individual URI="&modules;rt_(format_3655-format_2330)"/>
     </ClassAssertion>
     <Declaration>
-        <Individual URI="&modules;rt4_6"/>
+        <Individual URI="&modules;rt_(format_3655-format_2330)"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;xml2tsv"/>
+        <Individual URI="&modules;xml2tsv_(format_3247-format_3475)"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;xml2tsv_(format_3247-format_3475)"/>
+    </Declaration>
+    <ClassAssertion>
+        <OWLClass URI="&modules;xml2tsv"/>
+        <Individual URI="&modules;xml2tsv_(format_3655-format_3475)"/>
+    </ClassAssertion>
+    <Declaration>
+        <Individual URI="&modules;xml2tsv_(format_3655-format_3475)"/>
     </Declaration>
 </Ontology>
 

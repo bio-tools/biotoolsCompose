@@ -5,8 +5,8 @@
     <!ENTITY types "http://de/jabc/prophets/types#" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY types2 "http://de/jabc/prophets/types#2" >
-    <!ENTITY types4 "http://de/jabc/prophets/types#3" >
-    <!ENTITY types3 "http://de/jabc/prophets/types#." >
+    <!ENTITY types3 "http://de/jabc/prophets/types#3" >
+    <!ENTITY types4 "http://de/jabc/prophets/types#." >
     <!ENTITY X "http://de/jabc/prophets/types#X!" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY GCT "http://de/jabc/prophets/types#GCT/" >
@@ -15,57 +15,179 @@
     <!ENTITY OWL "http://de/jabc/prophets/types#OWL/" >
     <!ENTITY owl2 "http://de/jabc/prophets/types#owl:" >
     <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY mFLJ "http://de/jabc/prophets/types#mFLJ/" >
     <!ENTITY nbrf "http://de/jabc/prophets/types#nbrf/" >
+    <!ENTITY IMGT "http://de/jabc/prophets/types#IMGT/" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY Genotype "http://de/jabc/prophets/types#Genotype/" >
     <!ENTITY properties "http://de/jabc/prophets/types/properties/" >
+    <!ENTITY GenBank "http://de/jabc/prophets/types#EMBL/GenBank/" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY D "http://de/jabc/prophets/types#Structural_(3D)" >
+    <!ENTITY RH "http://de/jabc/prophets/types#Radiation_Hybrid_(RH)" >
     <!ENTITY sequence "http://de/jabc/prophets/types#Database_hits_(sequence)" >
     <!ENTITY repeats "http://de/jabc/prophets/types#Sequence_features_(repeats)" >
+    <!ENTITY CD "http://de/jabc/prophets/types#Protein_circular_dichroism_(CD)" >
     <!ENTITY primers "http://de/jabc/prophets/types#Nucleic_acid_features_(primers)" >
     <!ENTITY cliques "http://de/jabc/prophets/types#Phylogenetic_tree_report_(cliques)" >
     <!ENTITY invariants "http://de/jabc/prophets/types#Phylogenetic_tree_report_(invariants)" >
     <!ENTITY restriction_sites "http://de/jabc/prophets/types#Nucleic_acid_features_(restriction_sites)" >
     <!ENTITY tree_distances "http://de/jabc/prophets/types#Phylogenetic_tree_report_(tree_distances)" >
     <!ENTITY quality_evaluation "http://de/jabc/prophets/types#Protein_structure_report_(quality_evaluation)" >
-    <!ENTITY _including_images "http://de/jabc/prophets/types#MIME__HTML_format_for_Web_pages,_which_can_include_external_resources,_including_images," >
 ]>
 
 
 <Ontology xmlns="http://www.w3.org/2006/12/owl2-xml#"
      xml:base="http://www.w3.org/2006/12/owl2-xml#"
      xmlns:repeats="&types;Sequence_features_(repeats)"
+     xmlns:D="&types;Structural_(3D)"
+     xmlns:mFLJ="&types;mFLJ/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:quality_evaluation="&types;Protein_structure_report_(quality_evaluation)"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:_including_images="&types;MIME__HTML_format_for_Web_pages,_which_can_include_external_resources,_including_images,"
-     xmlns:types4="&types;3"
      xmlns:tree_distances="&types;Phylogenetic_tree_report_(tree_distances)"
-     xmlns:types3="&types;."
+     xmlns:types4="&types;."
+     xmlns:types3="&types;3"
      xmlns:RDF="&types;RDF/"
      xmlns:types2="&types;2"
      xmlns:X="&types;X!"
      xmlns:owl2="&types;owl:"
      xmlns:nbrf="&types;nbrf/"
+     xmlns:CD="&types;Protein_circular_dichroism_(CD)"
      xmlns:types="http://de/jabc/prophets/types#"
      xmlns:cliques="&types;Phylogenetic_tree_report_(cliques)"
      xmlns:OWL="&types;OWL/"
+     xmlns:Genotype="&types;Genotype/"
      xmlns:restriction_sites="&types;Nucleic_acid_features_(restriction_sites)"
+     xmlns:GenBank="&types;EMBL/GenBank/"
      xmlns:PED="&types;PED/"
      xmlns:sequence="&types;Database_hits_(sequence)"
+     xmlns:IMGT="&types;IMGT/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:RH="&types;Radiation_Hybrid_(RH)"
      xmlns:GCT="&types;GCT/"
      xmlns:primers="&types;Nucleic_acid_features_(primers)"
      xmlns:properties="http://de/jabc/prophets/types/properties/"
      xmlns:invariants="&types;Phylogenetic_tree_report_(invariants)"
      URI="http://de/jabc/prophets/types">
     <SubClassOf>
+        <OWLClass URI="&types;Accession"/>
+        <OWLClass URI="&types;Identifier"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;Accession"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;Alignment_format"/>
+        <OWLClass URI="&types;Format_(by_type_of_data)"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;Alignment_format"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;Alignment_format_(text)"/>
+        <OWLClass URI="&types;Alignment_format"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;Alignment_format_(text)"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;Amino_acid_index"/>
+        <OWLClass URI="&types;Amino_acid_property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&types;Amino_acid_index"/>
+        <OWLClass URI="&types;Matrix"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;Amino_acid_index"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;Amino_acid_index_(hydropathy)"/>
+        <OWLClass URI="&types;Amino_acid_index"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;Amino_acid_index_(hydropathy)"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;Amino_acid_property"/>
+        <OWLClass URI="&types;Molecular_property"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;Amino_acid_property"/>
+    </Declaration>
+    <SubClassOf>
         <OWLClass URI="&types;Binary_format"/>
         <OWLClass URI="&types;Format"/>
     </SubClassOf>
     <Declaration>
         <OWLClass URI="&types;Binary_format"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;CSV"/>
+        <OWLClass URI="&types;DSV"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;CSV"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;DSV"/>
+        <OWLClass URI="&types;Textual_format"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;DSV"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;Data"/>
+        <OWLClass URI="&owl;Thing"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;Data"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;Document_format"/>
+        <OWLClass URI="&types;Format_(by_type_of_data)"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;Document_format"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;Experimental_measurement"/>
+        <OWLClass URI="&types;Data"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;Experimental_measurement"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;FASTA"/>
+        <OWLClass URI="&types;Alignment_format_(text)"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&types;FASTA"/>
+        <OWLClass URI="&types;FASTA-like_(text)"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;FASTA"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;FASTA-like"/>
+        <OWLClass URI="&types;Sequence_record_format"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;FASTA-like"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;FASTA-like_(text)"/>
+        <OWLClass URI="&types;FASTA-like"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&types;FASTA-like_(text)"/>
+        <OWLClass URI="&types;Textual_format"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;FASTA-like_(text)"/>
     </Declaration>
     <SubClassOf>
         <OWLClass URI="&types;Format"/>
@@ -75,18 +197,78 @@
         <OWLClass URI="&types;Format"/>
     </Declaration>
     <SubClassOf>
-        <OWLClass URI="&types;Format_(typed)"/>
+        <OWLClass URI="&types;Format_(by_type_of_data)"/>
         <OWLClass URI="&types;Format"/>
     </SubClassOf>
     <Declaration>
-        <OWLClass URI="&types;Format_(typed)"/>
+        <OWLClass URI="&types;Format_(by_type_of_data)"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;Gene_expression_data"/>
+        <OWLClass URI="&types;Data"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;Gene_expression_data"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;Gene_expression_profile"/>
+        <OWLClass URI="&types;Gene_expression_data"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;Gene_expression_profile"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;HTML"/>
+        <OWLClass URI="&types;Format"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;HTML"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;Identifier"/>
+        <OWLClass URI="&types;Data"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;Identifier"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;Identifier_(hybrid)"/>
+        <OWLClass URI="&types;Identifier"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;Identifier_(hybrid)"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;Identifier_(typed)"/>
+        <OWLClass URI="&types;Identifier"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;Identifier_(typed)"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;Image"/>
+        <OWLClass URI="&types;Data"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;Image"/>
     </Declaration>
     <SubClassOf>
         <OWLClass URI="&types;Image_format"/>
-        <OWLClass URI="&types;Format_(typed)"/>
+        <OWLClass URI="&types;Format_(by_type_of_data)"/>
     </SubClassOf>
     <Declaration>
         <OWLClass URI="&types;Image_format"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;KEGG_object_identifier"/>
+        <OWLClass URI="&types;Accession"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&types;KEGG_object_identifier"/>
+        <OWLClass URI="&types;Identifier_(hybrid)"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;KEGG_object_identifier"/>
     </Declaration>
     <SubClassOf>
         <OWLClass URI="&types;MGF"/>
@@ -96,11 +278,50 @@
         <OWLClass URI="&types;MGF"/>
     </Declaration>
     <SubClassOf>
+        <OWLClass URI="&types;Mass_spectrometry_data"/>
+        <OWLClass URI="&types;Experimental_measurement"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;Mass_spectrometry_data"/>
+    </Declaration>
+    <SubClassOf>
         <OWLClass URI="&types;Mass_spectrometry_data_format"/>
-        <OWLClass URI="&types;Format_(typed)"/>
+        <OWLClass URI="&types;Format_(by_type_of_data)"/>
     </SubClassOf>
     <Declaration>
         <OWLClass URI="&types;Mass_spectrometry_data_format"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;Mass_spectrometry_spectra"/>
+        <OWLClass URI="&types;Mass_spectrometry_data"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;Mass_spectrometry_spectra"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;Matrix"/>
+        <OWLClass URI="&types;Data"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;Matrix"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;Molecular_property"/>
+        <OWLClass URI="&types;Data"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;Molecular_property"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;PDF"/>
+        <OWLClass URI="&types;Binary_format"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&types;PDF"/>
+        <OWLClass URI="&types;Document_format"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;PDF"/>
     </Declaration>
     <SubClassOf>
         <OWLClass URI="&types;PNG"/>
@@ -114,8 +335,101 @@
         <OWLClass URI="&types;PNG"/>
     </Declaration>
     <SubClassOf>
+        <OWLClass URI="&types;Pathway_ID_(KEGG)"/>
+        <OWLClass URI="&types;KEGG_object_identifier"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&types;Pathway_ID_(KEGG)"/>
+        <OWLClass URI="&types;Pathway_or_network_accession"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;Pathway_ID_(KEGG)"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;Pathway_or_network"/>
+        <OWLClass URI="&types;Data"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;Pathway_or_network"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;Pathway_or_network_accession"/>
+        <OWLClass URI="&types;Accession"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&types;Pathway_or_network_accession"/>
+        <OWLClass URI="&types;Pathway_or_network_identifier"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;Pathway_or_network_accession"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;Pathway_or_network_identifier"/>
+        <OWLClass URI="&types;Identifier_(typed)"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;Pathway_or_network_identifier"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;Peptide_identification"/>
+        <OWLClass URI="&types;Peptide_property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&types;Peptide_identification"/>
+        <OWLClass URI="&types;Protein_property"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;Peptide_identification"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;Peptide_property"/>
+        <OWLClass URI="&types;Molecular_property"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;Peptide_property"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;Protein_property"/>
+        <OWLClass URI="&types;Molecular_property"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;Protein_property"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;Sequence_accession"/>
+        <OWLClass URI="&types;Accession"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&types;Sequence_accession"/>
+        <OWLClass URI="&types;Sequence_identifier"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;Sequence_accession"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;Sequence_accession_(protein)"/>
+        <OWLClass URI="&types;Sequence_accession"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;Sequence_accession_(protein)"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;Sequence_identifier"/>
+        <OWLClass URI="&types;Identifier_(typed)"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;Sequence_identifier"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;Sequence_record_format"/>
+        <OWLClass URI="&types;Format_(by_type_of_data)"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;Sequence_record_format"/>
+    </Declaration>
+    <SubClassOf>
         <OWLClass URI="&types;TSV"/>
-        <OWLClass URI="&types;Textual_format"/>
+        <OWLClass URI="&types;DSV"/>
     </SubClassOf>
     <Declaration>
         <OWLClass URI="&types;TSV"/>
@@ -126,6 +440,39 @@
     </SubClassOf>
     <Declaration>
         <OWLClass URI="&types;Textual_format"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;Thermo_RAW"/>
+        <OWLClass URI="&types;Binary_format"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&types;Thermo_RAW"/>
+        <OWLClass URI="&types;Mass_spectrometry_data_format"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;Thermo_RAW"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;UniProt_accession"/>
+        <OWLClass URI="&types;Sequence_accession_(protein)"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;UniProt_accession"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;X!Tandem_XML"/>
+        <OWLClass URI="&types;Binary_format"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&types;X!Tandem_XML"/>
+        <OWLClass URI="&types;Mass_spectrometry_data_format"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&types;X!Tandem_XML"/>
+        <OWLClass URI="&types;Textual_format"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;X!Tandem_XML"/>
     </Declaration>
     <SubClassOf>
         <OWLClass URI="&types;XML"/>
@@ -164,18 +511,33 @@
         <OWLClass URI="&types;mzXML"/>
     </Declaration>
     <SubClassOf>
-        <OWLClass URI="&types;netCDF"/>
+        <OWLClass URI="&types;pepXML"/>
         <OWLClass URI="&types;Mass_spectrometry_data_format"/>
     </SubClassOf>
-    <Declaration>
-        <OWLClass URI="&types;netCDF"/>
-    </Declaration>
     <SubClassOf>
         <OWLClass URI="&types;pepXML"/>
-        <OWLClass URI="&types;Mass_spectrometry_data_format"/>
+        <OWLClass URI="&types;XML"/>
     </SubClassOf>
     <Declaration>
         <OWLClass URI="&types;pepXML"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;plain_text_format_(unformatted)"/>
+        <OWLClass URI="&types;Textual_format"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;plain_text_format_(unformatted)"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&types;protXML"/>
+        <OWLClass URI="&types;Mass_spectrometry_data_format"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&types;protXML"/>
+        <OWLClass URI="&types;XML"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&types;protXML"/>
     </Declaration>
     <Declaration>
         <DataProperty URI="&properties;branchName"/>

@@ -47,7 +47,10 @@ import de.jabc.plugin.prophets.lib.defaultImpl.XStreamModuleProvider;
 public class DomainSetup {
 
 	// this URL always points to the last stable version
-	private static String edamurl = "http://edamontology.org/EDAM.owl";
+	//private static String edamurl = "http://edamontology.org/EDAM.owl";
+	
+	// this URL alternatively points to a specific version of EDAM
+	private static String edamurl = "http://edamontology.org/EDAM_1.18.owl";
 
 	// fields to provide easy access to EDAM for all methods in this class
 	private static OWLOntology edamOntology;
@@ -98,7 +101,7 @@ public class DomainSetup {
 	private static void EDAM2PROPHETS(String projectdir) throws OntEDException, FileNotFoundException {
 		File servicetaxonomyfile = new File(projectdir + "/prophets/moduleTaxonomy.owl");
 		File typetaxonomyfile = new File(projectdir + "/prophets/typeTaxonomy.owl");
-
+		
 		/* CREATE PROPHETS-COMPATIBLE MODULE TAXONOMY (using OntED) */
 
 		// create empty ontology
@@ -140,10 +143,17 @@ public class DomainSetup {
 				.instantiateOntEDDataProperty(URI.create("http://de/jabc/prophets/types/properties/branchName"));
 		api_modules.createDataProperty(branchName);
 
+		// get "data" class, http://edamontology.org/data_0006
+		OWLClass dataClass = edamDataFactory.getOWLClass(IRI.create("http://edamontology.org/data_0006"));
+
+		// add data terms from EDAM to type taxonomy
+		addClassTree2OntedOntology(dataClass, api_modules.getOwlThing(), factory_modules, api_modules, edamDataFactory,
+				edamOntology);
+
 		// get "format" class, http://edamontology.org/format_1915
 		OWLClass formatClass = edamDataFactory.getOWLClass(IRI.create("http://edamontology.org/format_1915"));
 
-		// add operation terms from EDAM to service taxonomy
+		// add format terms from EDAM to type taxonomy
 		addClassTree2OntedOntology(formatClass, api_modules.getOwlThing(), factory_modules, api_modules,
 				edamDataFactory, edamOntology);
 
@@ -261,6 +271,8 @@ public class DomainSetup {
 		String[] columns = br.readLine().split(separator);
 		int indexOfName = getIndexOf(columns, "name");
 		int indexOfOperations = getIndexOf(columns, "EDAM operation");
+		int indexOfInTypes = getIndexOf(columns, "EDAM data type in");
+		int indexOfOutTypes = getIndexOf(columns, "EDAM data type out");
 		int indexOfInFormats = getIndexOf(columns, "EDAM data format in");
 		int indexOfOutFormats = getIndexOf(columns, "EDAM data format out");
 
@@ -281,58 +293,97 @@ public class DomainSetup {
 			String[] operations = tool[indexOfOperations].split("\\|");
 			String[] inFormats = tool[indexOfInFormats].split("\\|");
 			String[] outFormats = tool[indexOfOutFormats].split("\\|");
-			int combinations = inFormats.length * outFormats.length;
-			int counter = 1;
+			String[] inTypes = tool[indexOfInTypes].split("\\|");
+			String[] outTypes = tool[indexOfOutTypes].split("\\|");
+			int combinations = inFormats.length * outFormats.length * inTypes.length * outTypes.length;
+
+			if (combinations > 1) {
+				// add the toolname as (new) class to the OntED ontology
+				URI classURI = URI.create(ontedapi.getOntologyURI() + "#" + toolname);
+				OntEDClass toolclass = ontedfactory.instantiateOntEDClass(classURI);
+				ontedapi.createClass(toolclass);
+
+				// add subclass relations between toolname and operation(s)
+				for (String operation : operations) {
+					if (!operation.equals("")) {
+						OWLClass operationClass = edamDataFactory
+								.getOWLClass(IRI.create("http://edamontology.org/" + operation));
+						String ontedUri = "http://de/jabc/prophets/modules#" + getLabel(operationClass);
+						OntEDClass ontedclass = ontedapi.getOntEDClass(URI.create(ontedUri));
+						ontedapi.addSubClassOfAxiom(ontedclass, toolclass);
+					}
+				}
+			}
 
 			// for each input/output combination...
 			for (int i = 0; i < inFormats.length; i++) {
 				for (int j = 0; j < outFormats.length; j++) {
+					for (int k = 0; k < inTypes.length; k++) {
+						for (int l = 0; l < outTypes.length; l++) {
 
-					// create synthesis module for current tool
-					String displayname = toolname;
-					if (combinations > 1) {
-						displayname = displayname + "_" + counter;
-						counter++;
-					}
-					SynthesisModuleSIB sms = new SynthesisModuleSIB("biotoolsCompose/demo-sibs/" + toolname, "default",
-							displayname);
+							// create synthesis module for current tool
+							String displayname = toolname;
+							if (combinations > 1) {
+								// displayname = displayname + "_" + counter;
+								displayname = displayname + "_(" + inFormats[i] + "-" + outFormats[j] + ")";
+								System.out.println(displayname);
+								// counter++;
+							}
+							SynthesisModuleSIB sms = new SynthesisModuleSIB("biotoolsCompose/demo-sibs/" + toolname,
+									"default", displayname);
 
-					if (!inFormats[i].equals("")) {
-						OWLClass inClass = edamDataFactory
-								.getOWLClass(IRI.create("http://edamontology.org/" + inFormats[i]));
-						sms.addInputType(getLabel(inClass));
-					}
-					if (!outFormats[j].equals("")) {
-						OWLClass outClass = edamDataFactory
-								.getOWLClass(IRI.create("http://edamontology.org/" + outFormats[j]));
-						sms.addOutputType(getLabel(outClass));
-					}
+							if (!inFormats[i].equals("")) {
+								OWLClass inClass = edamDataFactory
+										.getOWLClass(IRI.create("http://edamontology.org/" + inFormats[i]));
+								sms.addInputType(getLabel(inClass));
+							}
+							if (!outFormats[j].equals("")) {
+								OWLClass outClass = edamDataFactory
+										.getOWLClass(IRI.create("http://edamontology.org/" + outFormats[j]));
+								sms.addOutputType(getLabel(outClass));
+							}
 
-					modules.add(sms);
+							if (!inTypes[k].equals("")) {
+								OWLClass inClass = edamDataFactory
+										.getOWLClass(IRI.create("http://edamontology.org/" + inTypes[k]));
+								sms.addInputType(getLabel(inClass));
+							}
+							if (!outTypes[l].equals("")) {
+								OWLClass outClass = edamDataFactory
+										.getOWLClass(IRI.create("http://edamontology.org/" + outTypes[l]));
+								sms.addOutputType(getLabel(outClass));
+							}
 
-					// add the tool as (new) individual to the OntED ontology
-					URI classURI = URI.create(ontedapi.getOntologyURI() + "#" + displayname);
-					OntEDIndividual ontedindiviual = ontedfactory.instantiateOntEDIndividual(classURI);
-					ontedapi.createIndividual(ontedindiviual);
+							modules.add(sms);
 
-					// add subclass relations according to operations
-					for (String operation : operations) {
-						if (!operation.equals("")) {
-							OWLClass operationClass = edamDataFactory
-									.getOWLClass(IRI.create("http://edamontology.org/" + operation));
-							String ontedUri = "http://de/jabc/prophets/modules#" + getLabel(operationClass);
-							OntEDClass ontedclass = ontedapi.getOntEDClass(URI.create(ontedUri));
-							ontedapi.addTypeOfAxiom(ontedclass, ontedindiviual);
+							// add the module as (new) individual to the
+							// OntEDontology
+							URI moduleURI = URI.create(ontedapi.getOntologyURI() + "#" + displayname);
+							OntEDIndividual ontedindiviual = ontedfactory.instantiateOntEDIndividual(moduleURI);
+							ontedapi.createIndividual(ontedindiviual);
+
+							if (combinations > 1) {
+								// add subclass relation to "mother" tool
+								URI classURI = URI.create(ontedapi.getOntologyURI() + "#" + toolname);
+								OntEDClass toolclass = ontedapi.getOntEDClass(classURI);
+								ontedapi.addTypeOfAxiom(toolclass, ontedindiviual);
+							} else {
+								// add subclass relations according to
+								// operations
+								for (String operation : operations) {
+									if (!operation.equals("")) {
+										OWLClass operationClass = edamDataFactory
+												.getOWLClass(IRI.create("http://edamontology.org/" + operation));
+										String ontedUri = "http://de/jabc/prophets/modules#" + getLabel(operationClass);
+										OntEDClass ontedclass = ontedapi.getOntEDClass(URI.create(ontedUri));
+										ontedapi.addTypeOfAxiom(ontedclass, ontedindiviual);
+									}
+								}
+							}
 						}
 					}
-
-					// (input/output formats should already be in the taxonomy.
-					// But maybe add is-a relation for the tool's parameters?
-
 				}
-
 			}
-
 		}
 
 		// write modules.xml
@@ -365,7 +416,7 @@ public class DomainSetup {
 		}
 		return -1;
 	}
-	
+
 	/**
 	 * Shrinks the taxonomies to the individuals and classes (and their
 	 * transitive parents) that are contained in the modules.xml and thus
@@ -377,19 +428,17 @@ public class DomainSetup {
 	 * @throws OntEDMissingImportException
 	 */
 	private static void shrinkTaxonomies(String projectdir)
-			throws FileNotFoundException, OntEDException,
-			OntEDMissingImportException {
-		
+			throws FileNotFoundException, OntEDException, OntEDMissingImportException {
+
 		String moduletaxonomyfile = projectdir + "/prophets/moduleTaxonomy.owl";
 		String typetaxonomyfile = projectdir + "/prophets/typeTaxonomy.owl";
 		String modulesxmlpath = projectdir + "/prophets/modules.xml";
-		
+
 		// strategy: mark/remember all nodes that are mentioned in the module
 		// definitions and
 		// their ancestors on the way to the root, then remove all other nodes
 		// load modules.xml, get all used services and types
-		XStreamModuleProvider moduleprovider = new XStreamModuleProvider(
-				new File(modulesxmlpath));
+		XStreamModuleProvider moduleprovider = new XStreamModuleProvider(new File(modulesxmlpath));
 		Set<SynthesisModuleSIB> modules = moduleprovider.getModules();
 
 		Set<String> services = new HashSet<String>();
@@ -430,12 +479,11 @@ public class DomainSetup {
 			Set<OntEDClass> alltypes = ontedapi.infGetTypes(individual);
 			classestokeep.addAll(alltypes);
 		}
-		
+
 		int moduleclasseskept = classestokeep.size();
-		
+
 		// remove the individuals that do not have to be kept
-		Set<OntEDIndividual> individualstoremove = ontedapi
-				.getOntEDIndividuals();
+		Set<OntEDIndividual> individualstoremove = ontedapi.getOntEDIndividuals();
 		individualstoremove.removeAll(individualstokeep);
 
 		for (OntEDIndividual individualtoremove : individualstoremove) {
@@ -451,8 +499,7 @@ public class DomainSetup {
 		}
 
 		// save module taxonomy
-		ontedapi.writeOntologyToOutputStream(new FileOutputStream(new File(
-				moduletaxonomyfile)), "OWLXML");
+		ontedapi.writeOntologyToOutputStream(new FileOutputStream(new File(moduletaxonomyfile)), "OWLXML");
 
 		// load type taxonomy
 		ontedfactory = new DefaultFactory();
@@ -490,8 +537,7 @@ public class DomainSetup {
 				individualstokeep.add(ontedindividual);
 
 				// identify and keep all superclasses
-				Set<OntEDClass> alltypes = ontedapi
-						.infGetTypes(ontedindividual);
+				Set<OntEDClass> alltypes = ontedapi.infGetTypes(ontedindividual);
 				classestokeep.addAll(alltypes);
 			}
 			if (ontedclass != null) {
@@ -499,15 +545,14 @@ public class DomainSetup {
 				classestokeep.add(ontedclass);
 
 				// identify and keep all superclasses
-				Set<OntEDClass> allsuperclasses = ontedapi
-						.infGetSuperClasses(ontedclass);
+				Set<OntEDClass> allsuperclasses = ontedapi.infGetSuperClasses(ontedclass);
 				classestokeep.addAll(allsuperclasses);
 			}
 
 		}
 
 		int typeclasseskept = classestokeep.size();
-		
+
 		// remove the individuals that do not have to be kept
 		individualstoremove = ontedapi.getOntEDIndividuals();
 		individualstoremove.removeAll(individualstokeep);
@@ -525,14 +570,11 @@ public class DomainSetup {
 		}
 
 		// save module taxonomy
-		ontedapi.writeOntologyToOutputStream(new FileOutputStream(new File(
-				typetaxonomyfile)), "OWLXML");
-		
+		ontedapi.writeOntologyToOutputStream(new FileOutputStream(new File(typetaxonomyfile)), "OWLXML");
 
 		System.out.println(moduleclasseskept + " module classes kept.");
 		System.out.println(typeclasseskept + " type classes kept.");
 
 	}
-
 
 }

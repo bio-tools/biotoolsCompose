@@ -3,7 +3,7 @@ package biotools.biotoolsCompose.poc.sib;
 import de.metaframe.jabc.framework.sib.annotation.SIBClass;
 
 @SIBClass("biotoolsCompose/demo-sibs/mzXMLplot")
-public class mzXMLplot extends AbstractBiotoolsComposeSIB {
+public class mzXMLplot extends AbstractCommandLineCallSIB {
 	
 	
 	

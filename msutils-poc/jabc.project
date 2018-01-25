@@ -1,7 +1,8 @@
-#Thu Mar 03 17:28:44 GMT 2016
-jabc.project.sibpath.0=/sibs/msutils-showcase-0.0.2-SNAPSHOT.jar
-ID=078d0a2a-38d5-4426-8b80-6da75207d7af
+#Thu Jan 25 16:33:47 GMT 2018
 SaveModel.path=/workflows
+ID=078d0a2a-38d5-4426-8b80-6da75207d7af
+jabc.project.sibpath.0=/sibs/msutils-showcase-0.0.3-SNAPSHOT.jar
+SIBCreator.path.link=-1
 jabc.project.name=msutils-showcase
 jabc.project.definition=1.0
 jabc.project.sibpath.1=<classpath>

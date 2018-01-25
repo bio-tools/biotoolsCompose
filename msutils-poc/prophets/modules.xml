@@ -1,177 +1,97 @@
 <set>
   <module>
-    <sibUID>biotoolsCompose/demo-sibs/ShowTextualFormat</sibUID>
-    <outputTypes/>
+    <sibUID>biotoolsCompose/demo-sibs/GeneTrail2</sibUID>
+    <outputTypes>
+      <string>Pathway_or_network</string>
+      <string>HTML</string>
+    </outputTypes>
     <inputTypes>
-      <string>Textual_format</string>
+      <string>plain_text_format_(unformatted)</string>
+      <string>UniProt_accession</string>
     </inputTypes>
     <killedTypes/>
     <branch>default</branch>
-    <displayName>ShowTextualFormat</displayName>
+    <displayName>GeneTrail2</displayName>
     <typeToParameter/>
     <staticParameters/>
   </module>
   <module>
-    <sibUID>biotoolsCompose/demo-sibs/msconvert</sibUID>
+    <sibUID>biotoolsCompose/demo-sibs/PeptideProphet</sibUID>
     <outputTypes>
-      <string>mzXML</string>
+      <string>Peptide_identification</string>
+      <string>pepXML</string>
     </outputTypes>
     <inputTypes>
-      <string>MGF</string>
-    </inputTypes>
-    <killedTypes/>
-    <branch>default</branch>
-    <displayName>msconvert_2</displayName>
-    <typeToParameter/>
-    <staticParameters/>
-  </module>
-  <module>
-    <sibUID>biotoolsCompose/demo-sibs/CompassXport</sibUID>
-    <outputTypes>
-      <string>mzXML</string>
-    </outputTypes>
-    <inputTypes>
-      <string>mzXML</string>
-    </inputTypes>
-    <killedTypes/>
-    <branch>default</branch>
-    <displayName>CompassXport_3</displayName>
-    <typeToParameter/>
-    <staticParameters/>
-  </module>
-  <module>
-    <sibUID>biotoolsCompose/demo-sibs/Comet</sibUID>
-    <outputTypes>
-      <string>mzIdentML</string>
-    </outputTypes>
-    <inputTypes>
-      <string>mzML</string>
-    </inputTypes>
-    <killedTypes/>
-    <branch>default</branch>
-    <displayName>Comet</displayName>
-    <typeToParameter/>
-    <staticParameters/>
-  </module>
-  <module>
-    <sibUID>biotoolsCompose/demo-sibs/LoadMzMLData</sibUID>
-    <outputTypes>
-      <string>mzML</string>
-    </outputTypes>
-    <inputTypes/>
-    <killedTypes/>
-    <branch>default</branch>
-    <displayName>LoadMzMLData</displayName>
-    <typeToParameter/>
-    <staticParameters/>
-  </module>
-  <module>
-    <sibUID>biotoolsCompose/demo-sibs/msconvert</sibUID>
-    <outputTypes>
-      <string>MGF</string>
-    </outputTypes>
-    <inputTypes>
-      <string>MGF</string>
-    </inputTypes>
-    <killedTypes/>
-    <branch>default</branch>
-    <displayName>msconvert_1</displayName>
-    <typeToParameter/>
-    <staticParameters/>
-  </module>
-  <module>
-    <sibUID>biotoolsCompose/demo-sibs/X!Tandem</sibUID>
-    <outputTypes>
-      <string>mzIdentML</string>
-    </outputTypes>
-    <inputTypes>
-      <string>mzML</string>
-    </inputTypes>
-    <killedTypes/>
-    <branch>default</branch>
-    <displayName>X!Tandem</displayName>
-    <typeToParameter/>
-    <staticParameters/>
-  </module>
-  <module>
-    <sibUID>biotoolsCompose/demo-sibs/CompassXport</sibUID>
-    <outputTypes>
-      <string>mzXML</string>
-    </outputTypes>
-    <inputTypes>
-      <string>MGF</string>
-    </inputTypes>
-    <killedTypes/>
-    <branch>default</branch>
-    <displayName>CompassXport_1</displayName>
-    <typeToParameter/>
-    <staticParameters/>
-  </module>
-  <module>
-    <sibUID>biotoolsCompose/demo-sibs/msconvert</sibUID>
-    <outputTypes>
-      <string>MGF</string>
-    </outputTypes>
-    <inputTypes>
-      <string>mzXML</string>
-    </inputTypes>
-    <killedTypes/>
-    <branch>default</branch>
-    <displayName>msconvert_4</displayName>
-    <typeToParameter/>
-    <staticParameters/>
-  </module>
-  <module>
-    <sibUID>biotoolsCompose/demo-sibs/rt4</sibUID>
-    <outputTypes>
-      <string>TSV</string>
-    </outputTypes>
-    <inputTypes>
+      <string>Peptide_identification</string>
       <string>pepXML</string>
     </inputTypes>
     <killedTypes/>
     <branch>default</branch>
-    <displayName>rt4_5</displayName>
+    <displayName>PeptideProphet_(format_3655-format_3655)</displayName>
     <typeToParameter/>
     <staticParameters/>
   </module>
   <module>
-    <sibUID>biotoolsCompose/demo-sibs/LoadMGFData</sibUID>
+    <sibUID>biotoolsCompose/demo-sibs/SearchGUI</sibUID>
     <outputTypes>
+      <string>Peptide_identification</string>
+      <string>pepXML</string>
+    </outputTypes>
+    <inputTypes>
+      <string>Mass_spectrometry_spectra</string>
+      <string>MGF</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>SearchGUI_(format_3651-format_3655)</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/isobar</sibUID>
+    <outputTypes>
+      <string>PDF</string>
+      <string>Gene_expression_profile</string>
+    </outputTypes>
+    <inputTypes>
+      <string>Peptide_identification</string>
+      <string>MGF</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>isobar_(format_3651-format_3508)</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/isobar</sibUID>
+    <outputTypes>
+      <string>PDF</string>
+      <string>Gene_expression_profile</string>
+    </outputTypes>
+    <inputTypes>
+      <string>TSV</string>
+      <string>Peptide_identification</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>isobar_(format_3475-format_3508)</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/msconvert</sibUID>
+    <outputTypes>
+      <string>Mass_spectrometry_spectra</string>
       <string>MGF</string>
     </outputTypes>
-    <inputTypes/>
-    <killedTypes/>
-    <branch>default</branch>
-    <displayName>LoadMGFData</displayName>
-    <typeToParameter/>
-    <staticParameters/>
-  </module>
-  <module>
-    <sibUID>biotoolsCompose/demo-sibs/rt4</sibUID>
-    <outputTypes>
-      <string>XML</string>
-    </outputTypes>
     <inputTypes>
-      <string>pepXML</string>
+      <string>Thermo_RAW</string>
+      <string>Mass_spectrometry_spectra</string>
     </inputTypes>
     <killedTypes/>
     <branch>default</branch>
-    <displayName>rt4_6</displayName>
-    <typeToParameter/>
-    <staticParameters/>
-  </module>
-  <module>
-    <sibUID>biotoolsCompose/demo-sibs/rt4</sibUID>
-    <outputTypes>
-      <string>XML</string>
-    </outputTypes>
-    <inputTypes>
-      <string>mzIdentML</string>
-    </inputTypes>
-    <killedTypes/>
-    <branch>default</branch>
-    <displayName>rt4_4</displayName>
+    <displayName>msconvert_(format_3712-format_3651)</displayName>
     <typeToParameter/>
     <staticParameters/>
   </module>
@@ -179,69 +99,15 @@
     <sibUID>biotoolsCompose/demo-sibs/rt4</sibUID>
     <outputTypes>
       <string>TSV</string>
-    </outputTypes>
-    <inputTypes>
-      <string>mzIdentML</string>
-    </inputTypes>
-    <killedTypes/>
-    <branch>default</branch>
-    <displayName>rt4_3</displayName>
-    <typeToParameter/>
-    <staticParameters/>
-  </module>
-  <module>
-    <sibUID>biotoolsCompose/demo-sibs/CompassXport</sibUID>
-    <outputTypes>
-      <string>mzXML</string>
-    </outputTypes>
-    <inputTypes>
-      <string>mzML</string>
-    </inputTypes>
-    <killedTypes/>
-    <branch>default</branch>
-    <displayName>CompassXport_5</displayName>
-    <typeToParameter/>
-    <staticParameters/>
-  </module>
-  <module>
-    <sibUID>biotoolsCompose/demo-sibs/CompassXport</sibUID>
-    <outputTypes>
-      <string>mzML</string>
-    </outputTypes>
-    <inputTypes>
-      <string>mzXML</string>
-    </inputTypes>
-    <killedTypes/>
-    <branch>default</branch>
-    <displayName>CompassXport_4</displayName>
-    <typeToParameter/>
-    <staticParameters/>
-  </module>
-  <module>
-    <sibUID>biotoolsCompose/demo-sibs/rt4</sibUID>
-    <outputTypes>
-      <string>XML</string>
+      <string>Amino_acid_index_(hydropathy)</string>
     </outputTypes>
     <inputTypes>
       <string>TSV</string>
+      <string>Peptide_property</string>
     </inputTypes>
     <killedTypes/>
     <branch>default</branch>
-    <displayName>rt4_2</displayName>
-    <typeToParameter/>
-    <staticParameters/>
-  </module>
-  <module>
-    <sibUID>biotoolsCompose/demo-sibs/rt</sibUID>
-    <outputTypes>
-      <string>Textual_format</string>
-    </outputTypes>
-    <inputTypes>
-      <string>TSV</string>
-    </inputTypes>
-    <killedTypes/>
-    <branch>default</branch>
-    <displayName>rt</displayName>
+    <displayName>rt4_(format_3475-format_3475)</displayName>
     <typeToParameter/>
     <staticParameters/>
   </module>
@@ -249,13 +115,15 @@
     <sibUID>biotoolsCompose/demo-sibs/Pep3D</sibUID>
     <outputTypes>
       <string>PNG</string>
+      <string>Image</string>
     </outputTypes>
     <inputTypes>
       <string>mzXML</string>
+      <string>Mass_spectrometry_spectra</string>
     </inputTypes>
     <killedTypes/>
     <branch>default</branch>
-    <displayName>Pep3D_1</displayName>
+    <displayName>Pep3D_(format_3654-format_3603)</displayName>
     <typeToParameter/>
     <staticParameters/>
   </module>
@@ -263,69 +131,509 @@
     <sibUID>biotoolsCompose/demo-sibs/msconvert</sibUID>
     <outputTypes>
       <string>mzXML</string>
+      <string>Mass_spectrometry_spectra</string>
     </outputTypes>
     <inputTypes>
-      <string>mzXML</string>
+      <string>Mass_spectrometry_spectra</string>
+      <string>MGF</string>
     </inputTypes>
     <killedTypes/>
     <branch>default</branch>
-    <displayName>msconvert_5</displayName>
+    <displayName>msconvert_(format_3651-format_3654)</displayName>
     <typeToParameter/>
     <staticParameters/>
   </module>
   <module>
-    <sibUID>biotoolsCompose/demo-sibs/rt4</sibUID>
+    <sibUID>biotoolsCompose/demo-sibs/X!Tandem</sibUID>
     <outputTypes>
-      <string>TSV</string>
+      <string>mzIdentML</string>
+      <string>Peptide_identification</string>
     </outputTypes>
     <inputTypes>
-      <string>TSV</string>
+      <string>Mass_spectrometry_spectra</string>
+      <string>mzML</string>
     </inputTypes>
     <killedTypes/>
     <branch>default</branch>
-    <displayName>rt4_1</displayName>
+    <displayName>X!Tandem_(format_3244-format_3247)</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/Tandem2XML</sibUID>
+    <outputTypes>
+      <string>Peptide_identification</string>
+      <string>pepXML</string>
+    </outputTypes>
+    <inputTypes>
+      <string>X!Tandem_XML</string>
+      <string>Peptide_identification</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>Tandem2XML</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/isobar</sibUID>
+    <outputTypes>
+      <string>PDF</string>
+      <string>Gene_expression_profile</string>
+    </outputTypes>
+    <inputTypes>
+      <string>CSV</string>
+      <string>Peptide_identification</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>isobar_(format_3752-format_3508)</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/Comet</sibUID>
+    <outputTypes>
+      <string>Peptide_identification</string>
+      <string>pepXML</string>
+    </outputTypes>
+    <inputTypes>
+      <string>mzXML</string>
+      <string>Mass_spectrometry_spectra</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>Comet_(format_3654-format_3655)</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/Show_PathwayOrNetwork</sibUID>
+    <outputTypes/>
+    <inputTypes>
+      <string>Pathway_or_network</string>
+      <string>Format</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>Show_PathwayOrNetwork</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/Show_AnyFile</sibUID>
+    <outputTypes/>
+    <inputTypes>
+      <string>Format</string>
+      <string>Data</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>Show_AnyFile</displayName>
     <typeToParameter/>
     <staticParameters/>
   </module>
   <module>
     <sibUID>biotoolsCompose/demo-sibs/msconvert</sibUID>
     <outputTypes>
+      <string>Mass_spectrometry_spectra</string>
       <string>mzML</string>
     </outputTypes>
     <inputTypes>
-      <string>mzML</string>
+      <string>Thermo_RAW</string>
+      <string>Mass_spectrometry_spectra</string>
     </inputTypes>
     <killedTypes/>
     <branch>default</branch>
-    <displayName>msconvert_9</displayName>
+    <displayName>msconvert_(format_3712-format_3244)</displayName>
     <typeToParameter/>
     <staticParameters/>
   </module>
   <module>
-    <sibUID>biotoolsCompose/demo-sibs/PeptideProphet</sibUID>
+    <sibUID>biotoolsCompose/demo-sibs/SearchGUI</sibUID>
     <outputTypes>
-      <string>mzIdentML</string>
+      <string>Peptide_identification</string>
+      <string>pepXML</string>
     </outputTypes>
     <inputTypes>
-      <string>mzIdentML</string>
+      <string>Mass_spectrometry_spectra</string>
+      <string>FASTA</string>
     </inputTypes>
     <killedTypes/>
     <branch>default</branch>
-    <displayName>PeptideProphet</displayName>
+    <displayName>SearchGUI_(format_1929-format_3655)</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/msconvert</sibUID>
+    <outputTypes>
+      <string>mzXML</string>
+      <string>Mass_spectrometry_spectra</string>
+    </outputTypes>
+    <inputTypes>
+      <string>Mass_spectrometry_spectra</string>
+      <string>mzML</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>msconvert_(format_3244-format_3654)</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/extract_protein_names</sibUID>
+    <outputTypes>
+      <string>plain_text_format_(unformatted)</string>
+      <string>UniProt_accession</string>
+    </outputTypes>
+    <inputTypes>
+      <string>protXML</string>
+      <string>Peptide_identification</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>extract_protein_names</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/SearchGUI</sibUID>
+    <outputTypes>
+      <string>mzIdentML</string>
+      <string>Peptide_identification</string>
+    </outputTypes>
+    <inputTypes>
+      <string>Mass_spectrometry_spectra</string>
+      <string>MGF</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>SearchGUI_(format_3651-format_3247)</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/X!Tandem</sibUID>
+    <outputTypes>
+      <string>X!Tandem_XML</string>
+      <string>Peptide_identification</string>
+    </outputTypes>
+    <inputTypes>
+      <string>Mass_spectrometry_spectra</string>
+      <string>mzML</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>X!Tandem_(format_3244-format_3711)</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/msconvert</sibUID>
+    <outputTypes>
+      <string>Mass_spectrometry_spectra</string>
+      <string>MGF</string>
+    </outputTypes>
+    <inputTypes>
+      <string>Mass_spectrometry_spectra</string>
+      <string>MGF</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>msconvert_(format_3651-format_3651)</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/Show_ProteinIdentification</sibUID>
+    <outputTypes/>
+    <inputTypes>
+      <string>Format</string>
+      <string>Peptide_identification</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>Show_ProteinIdentification</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/idconvert</sibUID>
+    <outputTypes>
+      <string>mzIdentML</string>
+      <string>Peptide_identification</string>
+    </outputTypes>
+    <inputTypes>
+      <string>Peptide_identification</string>
+      <string>pepXML</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>idconvert_(format_3655-format_3247)</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/Show_GeneExpressionProfile</sibUID>
+    <outputTypes/>
+    <inputTypes>
+      <string>Format</string>
+      <string>Gene_expression_profile</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>Show_GeneExpressionProfile</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/PeptideShaker_VPSM</sibUID>
+    <outputTypes>
+      <string>TSV</string>
+      <string>Peptide_identification</string>
+    </outputTypes>
+    <inputTypes>
+      <string>mzIdentML</string>
+      <string>Peptide_identification</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>PeptideShaker_VPSM_(format_3247-format_3475)</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/SearchGUI</sibUID>
+    <outputTypes>
+      <string>mzIdentML</string>
+      <string>Peptide_identification</string>
+    </outputTypes>
+    <inputTypes>
+      <string>Mass_spectrometry_spectra</string>
+      <string>FASTA</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>SearchGUI_(format_1929-format_3247)</displayName>
     <typeToParameter/>
     <staticParameters/>
   </module>
   <module>
     <sibUID>biotoolsCompose/demo-sibs/CompassXport</sibUID>
     <outputTypes>
-      <string>mzML</string>
+      <string>mzXML</string>
+      <string>Mass_spectrometry_spectra</string>
     </outputTypes>
     <inputTypes>
-      <string>MGF</string>
+      <string>mzXML</string>
+      <string>Mass_spectrometry_spectra</string>
     </inputTypes>
     <killedTypes/>
     <branch>default</branch>
-    <displayName>CompassXport_2</displayName>
+    <displayName>CompassXport_(format_3654-format_3654)</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/PeptideProphet</sibUID>
+    <outputTypes>
+      <string>Peptide_identification</string>
+      <string>pepXML</string>
+    </outputTypes>
+    <inputTypes>
+      <string>mzIdentML</string>
+      <string>Peptide_identification</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>PeptideProphet_(format_3247-format_3655)</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/SSRCalc</sibUID>
+    <outputTypes>
+      <string>Textual_format</string>
+      <string>Amino_acid_index_(hydropathy)</string>
+    </outputTypes>
+    <inputTypes>
+      <string>TSV</string>
+      <string>Peptide_property</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>SSRCalc_(format_3475-format_2330)</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/Pep3D</sibUID>
+    <outputTypes>
+      <string>PNG</string>
+      <string>Image</string>
+    </outputTypes>
+    <inputTypes>
+      <string>Mass_spectrometry_spectra</string>
+      <string>mzML</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>Pep3D_(format_3244-format_3603)</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/Show_AminoAcidIndex_hydropathy</sibUID>
+    <outputTypes/>
+    <inputTypes>
+      <string>Format</string>
+      <string>Amino_acid_index_(hydropathy)</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>Show_AminoAcidIndex_hydropathy</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/rt4</sibUID>
+    <outputTypes>
+      <string>XML</string>
+      <string>Amino_acid_index_(hydropathy)</string>
+    </outputTypes>
+    <inputTypes>
+      <string>pepXML</string>
+      <string>Peptide_property</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>rt4_(format_3655-format_2332)</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/idconvert</sibUID>
+    <outputTypes>
+      <string>mzIdentML</string>
+      <string>Peptide_identification</string>
+    </outputTypes>
+    <inputTypes>
+      <string>mzIdentML</string>
+      <string>Peptide_identification</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>idconvert_(format_3247-format_3247)</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/PTMProphet</sibUID>
+    <outputTypes>
+      <string>Peptide_identification</string>
+      <string>pepXML</string>
+    </outputTypes>
+    <inputTypes>
+      <string>Peptide_identification</string>
+      <string>pepXML</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>PTMProphet</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/rt</sibUID>
+    <outputTypes>
+      <string>Textual_format</string>
+      <string>Amino_acid_index_(hydropathy)</string>
+    </outputTypes>
+    <inputTypes>
+      <string>pepXML</string>
+      <string>Peptide_property</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>rt_(format_3655-format_2330)</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/xml2tsv</sibUID>
+    <outputTypes>
+      <string>TSV</string>
+      <string>Peptide_identification</string>
+    </outputTypes>
+    <inputTypes>
+      <string>mzIdentML</string>
+      <string>Peptide_identification</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>xml2tsv_(format_3247-format_3475)</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/ProteinProphet</sibUID>
+    <outputTypes>
+      <string>protXML</string>
+      <string>Peptide_identification</string>
+    </outputTypes>
+    <inputTypes>
+      <string>Peptide_identification</string>
+      <string>pepXML</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>ProteinProphet</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/Load_MSData_ThermoRAW</sibUID>
+    <outputTypes>
+      <string>Thermo_RAW</string>
+      <string>Mass_spectrometry_spectra</string>
+    </outputTypes>
+    <inputTypes/>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>Load_MSData_ThermoRAW</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/PeptideShaker_VPSM</sibUID>
+    <outputTypes>
+      <string>Peptide_identification</string>
+      <string>pepXML</string>
+    </outputTypes>
+    <inputTypes>
+      <string>mzIdentML</string>
+      <string>Peptide_identification</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>PeptideShaker_VPSM_(format_3247-format_3655)</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/msconvert</sibUID>
+    <outputTypes>
+      <string>mzXML</string>
+      <string>Mass_spectrometry_spectra</string>
+    </outputTypes>
+    <inputTypes>
+      <string>mzXML</string>
+      <string>Mass_spectrometry_spectra</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>msconvert_(format_3654-format_3654)</displayName>
     <typeToParameter/>
     <staticParameters/>
   </module>
@@ -333,9 +641,11 @@
     <sibUID>biotoolsCompose/demo-sibs/mzXMLplot</sibUID>
     <outputTypes>
       <string>PNG</string>
+      <string>Image</string>
     </outputTypes>
     <inputTypes>
       <string>mzXML</string>
+      <string>Mass_spectrometry_spectra</string>
     </inputTypes>
     <killedTypes/>
     <branch>default</branch>
@@ -346,26 +656,256 @@
   <module>
     <sibUID>biotoolsCompose/demo-sibs/msconvert</sibUID>
     <outputTypes>
-      <string>MGF</string>
+      <string>Mass_spectrometry_spectra</string>
+      <string>mzML</string>
     </outputTypes>
     <inputTypes>
+      <string>Mass_spectrometry_spectra</string>
       <string>mzML</string>
     </inputTypes>
     <killedTypes/>
     <branch>default</branch>
-    <displayName>msconvert_7</displayName>
+    <displayName>msconvert_(format_3244-format_3244)</displayName>
     <typeToParameter/>
     <staticParameters/>
   </module>
   <module>
-    <sibUID>biotoolsCompose/demo-sibs/ShowPng</sibUID>
-    <outputTypes/>
+    <sibUID>biotoolsCompose/demo-sibs/Comet</sibUID>
+    <outputTypes>
+      <string>Peptide_identification</string>
+      <string>pepXML</string>
+    </outputTypes>
     <inputTypes>
-      <string>PNG</string>
+      <string>Mass_spectrometry_spectra</string>
+      <string>mzML</string>
     </inputTypes>
     <killedTypes/>
     <branch>default</branch>
-    <displayName>ShowPng</displayName>
+    <displayName>Comet_(format_3244-format_3655)</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/idconvert</sibUID>
+    <outputTypes>
+      <string>Peptide_identification</string>
+      <string>pepXML</string>
+    </outputTypes>
+    <inputTypes>
+      <string>protXML</string>
+      <string>Peptide_identification</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>idconvert_(format_3747-format_3655)</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/rt4</sibUID>
+    <outputTypes>
+      <string>TSV</string>
+      <string>Amino_acid_index_(hydropathy)</string>
+    </outputTypes>
+    <inputTypes>
+      <string>pepXML</string>
+      <string>Peptide_property</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>rt4_(format_3655-format_3475)</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/CompassXport</sibUID>
+    <outputTypes>
+      <string>mzXML</string>
+      <string>Mass_spectrometry_spectra</string>
+    </outputTypes>
+    <inputTypes>
+      <string>Mass_spectrometry_spectra</string>
+      <string>mzML</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>CompassXport_(format_3244-format_3654)</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/idconvert</sibUID>
+    <outputTypes>
+      <string>mzIdentML</string>
+      <string>Peptide_identification</string>
+    </outputTypes>
+    <inputTypes>
+      <string>protXML</string>
+      <string>Peptide_identification</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>idconvert_(format_3747-format_3247)</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/PeptideShaker_PTMI</sibUID>
+    <outputTypes>
+      <string>Peptide_identification</string>
+      <string>pepXML</string>
+    </outputTypes>
+    <inputTypes>
+      <string>mzIdentML</string>
+      <string>Peptide_identification</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>PeptideShaker_PTMI_(format_3247-format_3655)</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/idconvert</sibUID>
+    <outputTypes>
+      <string>Peptide_identification</string>
+      <string>pepXML</string>
+    </outputTypes>
+    <inputTypes>
+      <string>Peptide_identification</string>
+      <string>pepXML</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>idconvert_(format_3655-format_3655)</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/xml2tsv</sibUID>
+    <outputTypes>
+      <string>TSV</string>
+      <string>Peptide_identification</string>
+    </outputTypes>
+    <inputTypes>
+      <string>Peptide_identification</string>
+      <string>pepXML</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>xml2tsv_(format_3655-format_3475)</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/gProfiler</sibUID>
+    <outputTypes>
+      <string>Pathway_or_network</string>
+      <string>TSV</string>
+    </outputTypes>
+    <inputTypes>
+      <string>plain_text_format_(unformatted)</string>
+      <string>UniProt_accession</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>gProfiler</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/Libra</sibUID>
+    <outputTypes>
+      <string>TSV</string>
+      <string>Gene_expression_profile</string>
+    </outputTypes>
+    <inputTypes>
+      <string>Peptide_identification</string>
+      <string>pepXML</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>Libra_(format_3655-format_3475)</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/protk</sibUID>
+    <outputTypes>
+      <string>TSV</string>
+      <string>Peptide_identification</string>
+    </outputTypes>
+    <inputTypes>
+      <string>Peptide_identification</string>
+      <string>pepXML</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>protk</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/CompassXport</sibUID>
+    <outputTypes>
+      <string>mzXML</string>
+      <string>Mass_spectrometry_spectra</string>
+    </outputTypes>
+    <inputTypes>
+      <string>Mass_spectrometry_spectra</string>
+      <string>MGF</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>CompassXport_(format_3651-format_3654)</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/msconvert</sibUID>
+    <outputTypes>
+      <string>mzXML</string>
+      <string>Mass_spectrometry_spectra</string>
+    </outputTypes>
+    <inputTypes>
+      <string>Thermo_RAW</string>
+      <string>Mass_spectrometry_spectra</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>msconvert_(format_3712-format_3654)</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/PeptideShaker_PTMI</sibUID>
+    <outputTypes>
+      <string>mzIdentML</string>
+      <string>Peptide_identification</string>
+    </outputTypes>
+    <inputTypes>
+      <string>mzIdentML</string>
+      <string>Peptide_identification</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>PeptideShaker_PTMI_(format_3247-format_3247)</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/msconvert</sibUID>
+    <outputTypes>
+      <string>Mass_spectrometry_spectra</string>
+      <string>MGF</string>
+    </outputTypes>
+    <inputTypes>
+      <string>mzXML</string>
+      <string>Mass_spectrometry_spectra</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>msconvert_(format_3654-format_3651)</displayName>
     <typeToParameter/>
     <staticParameters/>
   </module>
@@ -373,151 +913,252 @@
     <sibUID>biotoolsCompose/demo-sibs/SSRCalc</sibUID>
     <outputTypes>
       <string>Textual_format</string>
+      <string>Amino_acid_index_(hydropathy)</string>
     </outputTypes>
     <inputTypes>
       <string>Textual_format</string>
+      <string>Peptide_property</string>
     </inputTypes>
     <killedTypes/>
     <branch>default</branch>
-    <displayName>SSRCalc</displayName>
+    <displayName>SSRCalc_(format_2330-format_2330)</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/rt</sibUID>
+    <outputTypes>
+      <string>Textual_format</string>
+      <string>Amino_acid_index_(hydropathy)</string>
+    </outputTypes>
+    <inputTypes>
+      <string>TSV</string>
+      <string>Peptide_property</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>rt_(format_3475-format_2330)</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/Show_KEGGPathwayIDs</sibUID>
+    <outputTypes/>
+    <inputTypes>
+      <string>Format</string>
+      <string>Pathway_ID_(KEGG)</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>Show_KEGGPathwayIDs</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/EnrichNet</sibUID>
+    <outputTypes>
+      <string>Pathway_or_network</string>
+      <string>HTML</string>
+    </outputTypes>
+    <inputTypes>
+      <string>plain_text_format_(unformatted)</string>
+      <string>UniProt_accession</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>EnrichNet</displayName>
     <typeToParameter/>
     <staticParameters/>
   </module>
   <module>
     <sibUID>biotoolsCompose/demo-sibs/msconvert</sibUID>
     <outputTypes>
+      <string>Mass_spectrometry_spectra</string>
       <string>mzML</string>
     </outputTypes>
     <inputTypes>
+      <string>Mass_spectrometry_spectra</string>
       <string>MGF</string>
     </inputTypes>
     <killedTypes/>
     <branch>default</branch>
-    <displayName>msconvert_3</displayName>
-    <typeToParameter/>
-    <staticParameters/>
-  </module>
-  <module>
-    <sibUID>biotoolsCompose/demo-sibs/Pep3D</sibUID>
-    <outputTypes>
-      <string>PNG</string>
-    </outputTypes>
-    <inputTypes>
-      <string>mzML</string>
-    </inputTypes>
-    <killedTypes/>
-    <branch>default</branch>
-    <displayName>Pep3D_2</displayName>
+    <displayName>msconvert_(format_3651-format_3244)</displayName>
     <typeToParameter/>
     <staticParameters/>
   </module>
   <module>
     <sibUID>biotoolsCompose/demo-sibs/CompassXport</sibUID>
     <outputTypes>
+      <string>Mass_spectrometry_spectra</string>
       <string>mzML</string>
     </outputTypes>
     <inputTypes>
+      <string>Mass_spectrometry_spectra</string>
       <string>mzML</string>
     </inputTypes>
     <killedTypes/>
     <branch>default</branch>
-    <displayName>CompassXport_6</displayName>
+    <displayName>CompassXport_(format_3244-format_3244)</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/Libra</sibUID>
+    <outputTypes>
+      <string>mzIdentML</string>
+      <string>Gene_expression_profile</string>
+    </outputTypes>
+    <inputTypes>
+      <string>Peptide_identification</string>
+      <string>pepXML</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>Libra_(format_3655-format_3247)</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/PeptideShaker_PTMI</sibUID>
+    <outputTypes>
+      <string>TSV</string>
+      <string>Peptide_identification</string>
+    </outputTypes>
+    <inputTypes>
+      <string>mzIdentML</string>
+      <string>Peptide_identification</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>PeptideShaker_PTMI_(format_3247-format_3475)</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/rt4</sibUID>
+    <outputTypes>
+      <string>XML</string>
+      <string>Amino_acid_index_(hydropathy)</string>
+    </outputTypes>
+    <inputTypes>
+      <string>TSV</string>
+      <string>Peptide_property</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>rt4_(format_3475-format_2332)</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/CompassXport</sibUID>
+    <outputTypes>
+      <string>Mass_spectrometry_spectra</string>
+      <string>mzML</string>
+    </outputTypes>
+    <inputTypes>
+      <string>mzXML</string>
+      <string>Mass_spectrometry_spectra</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>CompassXport_(format_3654-format_3244)</displayName>
     <typeToParameter/>
     <staticParameters/>
   </module>
   <module>
     <sibUID>biotoolsCompose/demo-sibs/msconvert</sibUID>
     <outputTypes>
-      <string>mzXML</string>
+      <string>Mass_spectrometry_spectra</string>
+      <string>MGF</string>
     </outputTypes>
     <inputTypes>
+      <string>Mass_spectrometry_spectra</string>
       <string>mzML</string>
     </inputTypes>
     <killedTypes/>
     <branch>default</branch>
-    <displayName>msconvert_8</displayName>
-    <typeToParameter/>
-    <staticParameters/>
-  </module>
-  <module>
-    <sibUID>biotoolsCompose/demo-sibs/idconvert</sibUID>
-    <outputTypes>
-      <string>TSV</string>
-    </outputTypes>
-    <inputTypes>
-      <string>TSV</string>
-    </inputTypes>
-    <killedTypes/>
-    <branch>default</branch>
-    <displayName>idconvert_1</displayName>
-    <typeToParameter/>
-    <staticParameters/>
-  </module>
-  <module>
-    <sibUID>biotoolsCompose/demo-sibs/LoadNetCDFData</sibUID>
-    <outputTypes>
-      <string>netCDF</string>
-    </outputTypes>
-    <inputTypes/>
-    <killedTypes/>
-    <branch>default</branch>
-    <displayName>LoadNetCDFData</displayName>
+    <displayName>msconvert_(format_3244-format_3651)</displayName>
     <typeToParameter/>
     <staticParameters/>
   </module>
   <module>
     <sibUID>biotoolsCompose/demo-sibs/msconvert</sibUID>
     <outputTypes>
+      <string>Mass_spectrometry_spectra</string>
       <string>mzML</string>
     </outputTypes>
     <inputTypes>
       <string>mzXML</string>
+      <string>Mass_spectrometry_spectra</string>
     </inputTypes>
     <killedTypes/>
     <branch>default</branch>
-    <displayName>msconvert_6</displayName>
+    <displayName>msconvert_(format_3654-format_3244)</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/CompassXport</sibUID>
+    <outputTypes>
+      <string>Mass_spectrometry_spectra</string>
+      <string>mzML</string>
+    </outputTypes>
+    <inputTypes>
+      <string>Mass_spectrometry_spectra</string>
+      <string>MGF</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>CompassXport_(format_3651-format_3244)</displayName>
+    <typeToParameter/>
+    <staticParameters/>
+  </module>
+  <module>
+    <sibUID>biotoolsCompose/demo-sibs/GeneTrail</sibUID>
+    <outputTypes>
+      <string>Pathway_or_network</string>
+      <string>HTML</string>
+    </outputTypes>
+    <inputTypes>
+      <string>plain_text_format_(unformatted)</string>
+      <string>UniProt_accession</string>
+    </inputTypes>
+    <killedTypes/>
+    <branch>default</branch>
+    <displayName>GeneTrail</displayName>
     <typeToParameter/>
     <staticParameters/>
   </module>
   <module>
     <sibUID>biotoolsCompose/demo-sibs/idconvert</sibUID>
     <outputTypes>
-      <string>TSV</string>
+      <string>Peptide_identification</string>
+      <string>pepXML</string>
     </outputTypes>
     <inputTypes>
-      <string>XML</string>
+      <string>mzIdentML</string>
+      <string>Peptide_identification</string>
     </inputTypes>
     <killedTypes/>
     <branch>default</branch>
-    <displayName>idconvert_3</displayName>
+    <displayName>idconvert_(format_3247-format_3655)</displayName>
     <typeToParameter/>
     <staticParameters/>
   </module>
   <module>
-    <sibUID>biotoolsCompose/demo-sibs/idconvert</sibUID>
+    <sibUID>biotoolsCompose/demo-sibs/PeptideShaker_VPSM</sibUID>
     <outputTypes>
-      <string>XML</string>
+      <string>mzIdentML</string>
+      <string>Peptide_identification</string>
     </outputTypes>
     <inputTypes>
-      <string>TSV</string>
+      <string>mzIdentML</string>
+      <string>Peptide_identification</string>
     </inputTypes>
     <killedTypes/>
     <branch>default</branch>
-    <displayName>idconvert_2</displayName>
-    <typeToParameter/>
-    <staticParameters/>
-  </module>
-  <module>
-    <sibUID>biotoolsCompose/demo-sibs/idconvert</sibUID>
-    <outputTypes>
-      <string>XML</string>
-    </outputTypes>
-    <inputTypes>
-      <string>XML</string>
-    </inputTypes>
-    <killedTypes/>
-    <branch>default</branch>
-    <displayName>idconvert_4</displayName>
+    <displayName>PeptideShaker_VPSM_(format_3247-format_3247)</displayName>
     <typeToParameter/>
     <staticParameters/>
   </module>

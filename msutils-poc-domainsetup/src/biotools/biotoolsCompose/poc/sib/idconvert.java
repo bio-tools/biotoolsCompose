@@ -3,7 +3,7 @@ package biotools.biotoolsCompose.poc.sib;
 import de.metaframe.jabc.framework.sib.annotation.SIBClass;
 
 @SIBClass("biotoolsCompose/demo-sibs/idconvert")
-public class idconvert extends AbstractBiotoolsComposeSIB {
+public class idconvert extends AbstractCommandLineCallSIB {
 	
 	
 	
