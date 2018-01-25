@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<model version="2.1">
+  <id>fc19aec5-055c-4f20-8a24-30f3d6573570</id>
+  <name>Use Case #2</name>
+  <changecounter>11</changecounter>
+  <sib>
+    <id>35b2d60a-ad7b-47cf-ad4e-bf8d04314f66</id>
+    <name>Load_MSData_ThermoRAW</name>
+    <label>Load_MSData_ThermoRAW</label>
+    <sib-uid>biotoolsCompose/demo-sibs/Load_MSData_ThermoRAW</sib-uid>
+    <taxonomy>biotools.biotoolsCompose.poc.sib.Load_MSData_ThermoRAW</taxonomy>
+    <position>29.5,33.0</position>
+    <parameter name="contextKey">
+      <de.metaframe.jabc.framework.sib.parameter.ContextKey>
+        <ContextKeyFoundation>
+          <key>nameForFile</key>
+          <scope>LOCAL</scope>
+          <scopeMutable>true</scopeMutable>
+        </ContextKeyFoundation>
+      </de.metaframe.jabc.framework.sib.parameter.ContextKey>
+    </parameter>
+    <parameter name="file">
+      <file>/Users/lamprecht</file>
+    </parameter>
+    <finalbranches>default</finalbranches>
+    <finalbranches>error</finalbranches>
+    <userobject key="ABC$START">
+      <boolean>true</boolean>
+    </userobject>
+  </sib>
+  <edge>
+    <source>35b2d60a-ad7b-47cf-ad4e-bf8d04314f66</source>
+    <target>de8856dd-cf12-4074-a486-6c719568c39c</target>
+    <point>110.57522123893806,69.0</point>
+    <point>204.11214953271028,363.0</point>
+    <labelposition>500.0,0.0</labelposition>
+    <branch>default</branch>
+    <userobject key="prophets.fillinbranch">
+      <boolean>true</boolean>
+    </userobject>
+    <userobject key="prophets.branchformulas">
+      <map>
+        <entry>
+          <string>default</string>
+          <list>
+            <de.jabc.plugin.prophets.lib.data.FormulaTemplateInstance>
+              <templateName>module enforcement</templateName>
+              <variableValues>
+                <entry>
+                  <string>v1</string>
+                  <string>Peptide_identification</string>
+                </entry>
+              </variableValues>
+            </de.jabc.plugin.prophets.lib.data.FormulaTemplateInstance>
+            <de.jabc.plugin.prophets.lib.data.FormulaTemplateInstance>
+              <templateName>module enforcement</templateName>
+              <variableValues>
+                <entry>
+                  <string>v1</string>
+                  <string>Gene-set_enrichment_analysis</string>
+                </entry>
+              </variableValues>
+            </de.jabc.plugin.prophets.lib.data.FormulaTemplateInstance>
+            <de.jabc.plugin.prophets.lib.data.FormulaTemplateInstance>
+              <templateName>module dependency</templateName>
+              <variableValues>
+                <entry>
+                  <string>v1</string>
+                  <string>Gene-set_enrichment_analysis</string>
+                </entry>
+                <entry>
+                  <string>v2</string>
+                  <string>Peptide_identification</string>
+                </entry>
+              </variableValues>
+            </de.jabc.plugin.prophets.lib.data.FormulaTemplateInstance>
+            <de.jabc.plugin.prophets.lib.data.FormulaTemplateInstance>
+              <templateName>module dependency</templateName>
+              <variableValues>
+                <entry>
+                  <string>v1</string>
+                  <string>ProteinProphet</string>
+                </entry>
+                <entry>
+                  <string>v2</string>
+                  <string>PeptideProphet</string>
+                </entry>
+              </variableValues>
+            </de.jabc.plugin.prophets.lib.data.FormulaTemplateInstance>
+          </list>
+        </entry>
+      </map>
+    </userobject>
+  </edge>
+  <sib>
+    <id>de8856dd-cf12-4074-a486-6c719568c39c</id>
+    <name>Show_PathwayOrNetwork</name>
+    <label>Show_PathwayOrNetwork</label>
+    <sib-uid>biotoolsCompose/demo-sibs/Show_PathwayOrNetwork</sib-uid>
+    <taxonomy>biotools.biotoolsCompose.poc.sib.Show_PathwayOrNetwork</taxonomy>
+    <position>33.5,213.0</position>
+    <parameter name="file">
+      <de.metaframe.jabc.framework.sib.parameter.ContextKey>
+        <ContextKeyFoundation>
+          <key>path</key>
+          <scope>LOCAL</scope>
+          <scopeMutable>true</scopeMutable>
+        </ContextKeyFoundation>
+      </de.metaframe.jabc.framework.sib.parameter.ContextKey>
+    </parameter>
+    <finalbranches>default</finalbranches>
+    <finalbranches>error</finalbranches>
+  </sib>
+  <values/>
+</model>

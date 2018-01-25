@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<model version="2.1">
+  <id>9fc23d1c-b94d-41fc-a696-774fcffbfa2f</id>
+  <name>Use Case #4</name>
+  <changecounter>19</changecounter>
+  <sib>
+    <id>afaa4efc-d2ed-41de-acb9-a78aa9c18a26</id>
+    <name>Load_MSData_ThermoRAW</name>
+    <label>Load_MSData_ThermoRAW</label>
+    <sib-uid>biotoolsCompose/demo-sibs/Load_MSData_ThermoRAW</sib-uid>
+    <taxonomy>biotools.biotoolsCompose.poc.sib.Load_MSData_ThermoRAW</taxonomy>
+    <position>59.5,33.0</position>
+    <parameter name="contextKey">
+      <de.metaframe.jabc.framework.sib.parameter.ContextKey>
+        <ContextKeyFoundation>
+          <key>nameForFile</key>
+          <scope>LOCAL</scope>
+          <scopeMutable>true</scopeMutable>
+        </ContextKeyFoundation>
+      </de.metaframe.jabc.framework.sib.parameter.ContextKey>
+    </parameter>
+    <parameter name="file">
+      <file>/Users/lamprecht</file>
+    </parameter>
+    <finalbranches>default</finalbranches>
+    <finalbranches>error</finalbranches>
+    <userobject key="ABC$START">
+      <boolean>true</boolean>
+    </userobject>
+  </sib>
+  <edge>
+    <source>afaa4efc-d2ed-41de-acb9-a78aa9c18a26</source>
+    <target>26526b99-0472-47a8-a718-7b4e5c8b9d8c</target>
+    <point>135.96774193548387,69.0</point>
+    <point>148.9655172413793,303.0</point>
+    <labelposition>500.0,0.0</labelposition>
+    <branch>default</branch>
+    <userobject key="prophets.fillinbranch">
+      <boolean>true</boolean>
+    </userobject>
+    <userobject key="prophets.branchformulas">
+      <map>
+        <entry>
+          <string>default</string>
+          <list>
+            <de.jabc.plugin.prophets.lib.data.FormulaTemplateInstance>
+              <templateName>module enforcement</templateName>
+              <variableValues>
+                <entry>
+                  <string>v1</string>
+                  <string>iTRAQ</string>
+                </entry>
+              </variableValues>
+            </de.jabc.plugin.prophets.lib.data.FormulaTemplateInstance>
+            <de.jabc.plugin.prophets.lib.data.FormulaTemplateInstance>
+              <templateName>module dependency</templateName>
+              <variableValues>
+                <entry>
+                  <string>v1</string>
+                  <string>iTRAQ</string>
+                </entry>
+                <entry>
+                  <string>v2</string>
+                  <string>Validation_of_peptide-spectrum_matches</string>
+                </entry>
+              </variableValues>
+            </de.jabc.plugin.prophets.lib.data.FormulaTemplateInstance>
+          </list>
+        </entry>
+      </map>
+    </userobject>
+  </edge>
+  <sib>
+    <id>26526b99-0472-47a8-a718-7b4e5c8b9d8c</id>
+    <name>Show_GeneExpressionProfile</name>
+    <label>Show_GeneExpressionProfile</label>
+    <sib-uid>biotoolsCompose/demo-sibs/Show_GeneExpressionProfile</sib-uid>
+    <taxonomy>biotools.biotoolsCompose.poc.sib.Show_GeneExpressionProfile</taxonomy>
+    <position>53.5,228.0</position>
+    <parameter name="file">
+      <de.metaframe.jabc.framework.sib.parameter.ContextKey>
+        <ContextKeyFoundation>
+          <key>path</key>
+          <scope>LOCAL</scope>
+          <scopeMutable>true</scopeMutable>
+        </ContextKeyFoundation>
+      </de.metaframe.jabc.framework.sib.parameter.ContextKey>
+    </parameter>
+    <finalbranches>default</finalbranches>
+    <finalbranches>error</finalbranches>
+  </sib>
+  <values/>
+</model>

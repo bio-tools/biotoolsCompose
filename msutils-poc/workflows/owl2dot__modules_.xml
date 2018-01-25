@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<model version="2.1">
+  <id>a469faf7-3b2f-4d84-9dcb-97e762dd38bf</id>
+  <name>owl2dot (modules)</name>
+  <changecounter>12</changecounter>
+  <edge>
+    <source>1a14ac9e-4582-4cdf-9275-eac98fd7da0f</source>
+    <target>b05fd445-1034-494d-b568-1c2df7af4b14</target>
+    <point>75.0,45.0</point>
+    <point>210.0,45.0</point>
+    <labelposition>500.0,0.0</labelposition>
+    <branch>default</branch>
+  </edge>
+  <sib>
+    <id>ff2b1a33-09b7-40bb-9537-650af2943417</id>
+    <name>PutString_1</name>
+    <label>init dot string</label>
+    <sib-uid>basic-sibs/PutString</sib-uid>
+    <taxonomy>de.jabc.sib.common.basic.PutString</taxonomy>
+    <position>394.5,18.0</position>
+    <parameter name="value">
+      <string>digraph g{rankdir=&quot;RL&quot;;</string>
+    </parameter>
+    <parameter name="variable">
+      <de.metaframe.jabc.framework.sib.parameter.ContextKey>
+        <ContextKeyFoundation>
+          <key>dot</key>
+          <scope>LOCAL</scope>
+          <scopeMutable>true</scopeMutable>
+        </ContextKeyFoundation>
+      </de.metaframe.jabc.framework.sib.parameter.ContextKey>
+    </parameter>
+    <finalbranches>default</finalbranches>
+    <finalbranches>error</finalbranches>
+  </sib>
+  <sib>
+    <id>b05fd445-1034-494d-b568-1c2df7af4b14</id>
+    <name>ReadTextFile</name>
+    <label>read taxonomy file</label>
+    <sib-uid>io-sibs/ReadTextFile</sib-uid>
+    <taxonomy>de.jabc.sib.common.io.ReadTextFile</taxonomy>
+    <position>186.0,18.0</position>
+    <parameter name="encoding">
+      <string>ISO-8859-1</string>
+    </parameter>
+    <parameter name="file">
+      <de.metaframe.common.sib.parameter.ContextExpression>
+        <ContextExpressionFoundation>
+          <expression>${taxoFile}</expression>
+          <clazz>java.lang.Object</clazz>
+          <classMutable>false</classMutable>
+        </ContextExpressionFoundation>
+      </de.metaframe.common.sib.parameter.ContextExpression>
+    </parameter>
+    <parameter name="variable">
+      <de.metaframe.jabc.framework.sib.parameter.ContextKey>
+        <ContextKeyFoundation>
+          <key>owl</key>
+          <scope>DECLARED</scope>
+          <scopeMutable>true</scopeMutable>
+        </ContextKeyFoundation>
+      </de.metaframe.jabc.framework.sib.parameter.ContextKey>
+    </parameter>
+    <finalbranches>default</finalbranches>
+    <finalbranches>error</finalbranches>
+  </sib>
+  <edge>
+    <source>b05fd445-1034-494d-b568-1c2df7af4b14</source>
+    <target>ff2b1a33-09b7-40bb-9537-650af2943417</target>
+    <point>210.0,45.0</point>
+    <point>330.0,45.0</point>
+    <labelposition>500.0,0.0</labelposition>
+    <branch>default</branch>
+  </edge>
+  <sib>
+    <id>afe4c847-d033-4704-b84b-047c1cf63481</id>
+    <name>PutExpression</name>
+    <label>close dot</label>
+    <sib-uid>basic-sibs/PutExpression</sib-uid>
+    <taxonomy>de.jabc.sib.common.basic.PutExpression</taxonomy>
+    <position>46.5,468.0</position>
+    <parameter name="resolve">
+      <boolean>true</boolean>
+    </parameter>
+    <parameter name="value">
+      <de.metaframe.common.sib.parameter.ContextExpression>
+        <ContextExpressionFoundation>
+          <expression>${dot}}</expression>
+          <clazz>java.lang.Object</clazz>
+          <classMutable>true</classMutable>
+        </ContextExpressionFoundation>
+      </de.metaframe.common.sib.parameter.ContextExpression>
+    </parameter>
+    <parameter name="variable">
+      <de.metaframe.jabc.framework.sib.parameter.ContextKey>
+        <ContextKeyFoundation>
+          <key>dot</key>
+          <scope>LOCAL</scope>
+          <scopeMutable>true</scopeMutable>
+        </ContextKeyFoundation>
+      </de.metaframe.jabc.framework.sib.parameter.ContextKey>
+    </parameter>
+    <finalbranches>default</finalbranches>
+    <finalbranches>error</finalbranches>
+  </sib>
+  <edge>
+    <source>afe4c847-d033-4704-b84b-047c1cf63481</source>
+    <target>38da50ef-b456-44d8-acda-f8c158bd37f3</target>
+    <point>90.0,495.0</point>
+    <point>225.0,495.0</point>
+    <labelposition>500.0,0.0</labelposition>
+    <branch>default</branch>
+  </edge>
+  <sib>
+    <id>6ff57453-6147-4554-aac6-fcda1fd71975</id>
+    <name>ExtractPattern</name>
+    <label>extract subclass relations</label>
+    <sib-uid>basic-sibs/ExtractPattern</sib-uid>
+    <taxonomy>de.jabc.sib.common.basic.ExtractPattern</taxonomy>
+    <position>2.0,168.0</position>
+    <parameter name="group">
+      <de.metaframe.common.sib.parameter.ContextExpression>
+        <ContextExpressionFoundation>
+          <expression>${0}</expression>
+          <clazz>java.lang.Integer</clazz>
+          <classMutable>false</classMutable>
+        </ContextExpressionFoundation>
+      </de.metaframe.common.sib.parameter.ContextExpression>
+    </parameter>
+    <parameter name="matches">
+      <de.metaframe.jabc.framework.sib.parameter.ContextKey>
+        <ContextKeyFoundation>
+          <key>subclassRelations</key>
+          <scope>LOCAL</scope>
+          <scopeMutable>true</scopeMutable>
+        </ContextKeyFoundation>
+      </de.metaframe.jabc.framework.sib.parameter.ContextKey>
+    </parameter>
+    <parameter name="pattern">
+      <de.metaframe.common.sib.parameter.ContextExpression>
+        <ContextExpressionFoundation>
+          <expression>&lt;SubClassOf&gt;\s+(&lt;OWLClass URI=&quot;&amp;modules;\S+&quot;/&gt;\s+&lt;OWLClass URI=&quot;&amp;modules;\S+&quot;/&gt;)\s+&lt;/SubClassOf&gt;</expression>
+          <clazz>java.lang.String</clazz>
+          <classMutable>false</classMutable>
+        </ContextExpressionFoundation>
+      </de.metaframe.common.sib.parameter.ContextExpression>
+    </parameter>
+    <parameter name="string">
+      <de.metaframe.common.sib.parameter.ContextExpression>
+        <ContextExpressionFoundation>
+          <expression>${owl}</expression>
+          <clazz>java.lang.String</clazz>
+          <classMutable>false</classMutable>
+        </ContextExpressionFoundation>
+      </de.metaframe.common.sib.parameter.ContextExpression>
+    </parameter>
+    <finalbranches>default</finalbranches>
+    <finalbranches>error</finalbranches>
+  </sib>
+  <sib>
+    <id>082e6e32-74a8-4398-bf5b-9194d90a5de9</id>
+    <name>ExtractPattern_1</name>
+    <label>extract instanceof relations</label>
+    <sib-uid>basic-sibs/ExtractPattern</sib-uid>
+    <taxonomy>de.jabc.sib.common.basic.ExtractPattern</taxonomy>
+    <position>-2.5,333.0</position>
+    <parameter name="group">
+      <de.metaframe.common.sib.parameter.ContextExpression>
+        <ContextExpressionFoundation>
+          <expression>${0}</expression>
+          <clazz>java.lang.Integer</clazz>
+          <classMutable>false</classMutable>
+        </ContextExpressionFoundation>
+      </de.metaframe.common.sib.parameter.ContextExpression>
+    </parameter>
+    <parameter name="matches">
+      <de.metaframe.jabc.framework.sib.parameter.ContextKey>
+        <ContextKeyFoundation>
+          <key>instanceOfRelations</key>
+          <scope>LOCAL</scope>
+          <scopeMutable>true</scopeMutable>
+        </ContextKeyFoundation>
+      </de.metaframe.jabc.framework.sib.parameter.ContextKey>
+    </parameter>
+    <parameter name="pattern">
+      <de.metaframe.common.sib.parameter.ContextExpression>
+        <ContextExpressionFoundation>
+          <expression>&lt;ClassAssertion&gt;\s+&lt;OWLClass URI=&quot;&amp;modules;\S+&quot;/&gt;\s+&lt;Individual URI=&quot;&amp;modules;\S+&quot;/&gt;\s+&lt;/ClassAssertion&gt;</expression>
+          <clazz>java.lang.String</clazz>
+          <classMutable>false</classMutable>
+        </ContextExpressionFoundation>
+      </de.metaframe.common.sib.parameter.ContextExpression>
+    </parameter>
+    <parameter name="string">
+      <de.metaframe.common.sib.parameter.ContextExpression>
+        <ContextExpressionFoundation>
+          <expression>${owl}</expression>
+          <clazz>java.lang.String</clazz>
+          <classMutable>false</classMutable>
+        </ContextExpressionFoundation>
+      </de.metaframe.common.sib.parameter.ContextExpression>
+    </parameter>
+    <finalbranches>default</finalbranches>
+    <finalbranches>error</finalbranches>
+  </sib>
+  <sib>
+    <id>8afe7e27-9ade-4ed9-9070-4d1ece277b1b</id>
+    <name>IterateElements</name>
+    <label>for all subclass relations</label>
+    <sib-uid>collection-sibs/IterateElements</sib-uid>
+    <taxonomy>de.jabc.sib.common.collection.IterateElements</taxonomy>
+    <position>170.5,168.0</position>
+    <parameter name="collection">
+      <de.metaframe.jabc.framework.sib.parameter.ContextKey>
+        <ContextKeyFoundation>
+          <key>subclassRelations</key>
+          <scope>DECLARED</scope>
+          <scopeMutable>true</scopeMutable>
+        </ContextKeyFoundation>
+      </de.metaframe.jabc.framework.sib.parameter.ContextKey>
+    </parameter>
+    <parameter name="element">
+      <de.metaframe.jabc.framework.sib.parameter.ContextKey>
+        <ContextKeyFoundation>
+          <key>subclassRelation</key>
+          <scope>LOCAL</scope>
+          <scopeMutable>true</scopeMutable>
+        </ContextKeyFoundation>
+      </de.metaframe.jabc.framework.sib.parameter.ContextKey>
+    </parameter>
+    <parameter name="iterator">
+      <de.metaframe.jabc.framework.sib.parameter.ContextKey>
+        <ContextKeyFoundation>
+          <key>iterator</key>
+          <scope>LOCAL</scope>
+          <scopeMutable>true</scopeMutable>
+        </ContextKeyFoundation>
+      </de.metaframe.jabc.framework.sib.parameter.ContextKey>
+    </parameter>
+    <finalbranches>error</finalbranches>
+    <finalbranches>exit</finalbranches>
+    <finalbranches>next</finalbranches>
+  </sib>
+  <sib>
+    <id>7bd9c21d-28c1-4713-ab8f-df2aec7de502</id>
+    <name>IterateElements_1</name>
+    <label>for all instanceof relations</label>
+    <sib-uid>collection-sibs/IterateElements</sib-uid>
+    <taxonomy>de.jabc.sib.common.collection.IterateElements</taxonomy>
+    <position>166.0,333.0</position>
+    <parameter name="collection">
+      <de.metaframe.jabc.framework.sib.parameter.ContextKey>
+        <ContextKeyFoundation>
+          <key>instanceOfRelations</key>
+          <scope>DECLARED</scope>
+          <scopeMutable>true</scopeMutable>
+        </ContextKeyFoundation>
+      </de.metaframe.jabc.framework.sib.parameter.ContextKey>
+    </parameter>
+    <parameter name="element">
+      <de.metaframe.jabc.framework.sib.parameter.ContextKey>
+        <ContextKeyFoundation>
+          <key>instanceOfRelation</key>
+          <scope>LOCAL</scope>
+          <scopeMutable>true</scopeMutable>
+        </ContextKeyFoundation>
+      </de.metaframe.jabc.framework.sib.parameter.ContextKey>
+    </parameter>
+    <parameter name="iterator">
+      <de.metaframe.jabc.framework.sib.parameter.ContextKey>
+        <ContextKeyFoundation>
+          <key>iterator</key>
+          <scope>LOCAL</scope>
+          <scopeMutable>true</scopeMutable>
+        </ContextKeyFoundation>
+      </de.metaframe.jabc.framework.sib.parameter.ContextKey>
+    </parameter>
+    <finalbranches>error</finalbranches>
+    <finalbranches>exit</finalbranches>
+    <finalbranches>next</finalbranches>
+  </sib>
+  <sib>
+    <id>d37342f2-037b-417f-8fbf-79de6f3912fd</id>
+    <name>PutExpression_3</name>
+    <label>add a relation</label>
+    <sib-uid>basic-sibs/PutExpression</sib-uid>
+    <taxonomy>de.jabc.sib.common.basic.PutExpression</taxonomy>
+    <position>394.5,198.0</position>
+    <parameter name="resolve">
+      <boolean>true</boolean>
+    </parameter>
+    <parameter name="value">
+      <de.metaframe.common.sib.parameter.ContextExpression>
+        <ContextExpressionFoundation>
+          <expression>${dot} &quot;${classes[0]}&quot; -&gt; &quot;${classes[1]}&quot;;
+</expression>
+          <clazz>java.lang.Object</clazz>
+          <classMutable>true</classMutable>
+        </ContextExpressionFoundation>
+      </de.metaframe.common.sib.parameter.ContextExpression>
+    </parameter>
+    <parameter name="variable">
+      <de.metaframe.jabc.framework.sib.parameter.ContextKey>
+        <ContextKeyFoundation>
+          <key>dot</key>
+          <scope>LOCAL</scope>
+          <scopeMutable>true</scopeMutable>
+        </ContextKeyFoundation>
+      </de.metaframe.jabc.framework.sib.parameter.ContextKey>
+    </parameter>
+    <finalbranches>default</finalbranches>
+    <finalbranches>error</finalbranches>
+  </sib>
+  <edge>
+    <source>ff2b1a33-09b7-40bb-9537-650af2943417</source>
+    <target>6ff57453-6147-4554-aac6-fcda1fd71975</target>
+    <point>330.0,60.0</point>
+    <point>315.0,176.0</point>
+    <branch>default</branch>
+  </edge>
+  <edge>
+    <source>6ff57453-6147-4554-aac6-fcda1fd71975</source>
+    <target>8afe7e27-9ade-4ed9-9070-4d1ece277b1b</target>
+    <point>77.0,195.0</point>
+    <point>242.0,195.0</point>
+    <labelposition>500.0,0.0</labelposition>
+    <branch>default</branch>
+  </edge>
+  <sib>
+    <id>8ad91a25-c2fd-4275-97da-844d4e5a480b</id>
+    <name>ExtractPattern_2</name>
+    <label>extract classes</label>
+    <sib-uid>basic-sibs/ExtractPattern</sib-uid>
+    <taxonomy>de.jabc.sib.common.basic.ExtractPattern</taxonomy>
+    <position>391.0,108.0</position>
+    <parameter name="group">
+      <de.metaframe.common.sib.parameter.ContextExpression>
+        <ContextExpressionFoundation>
+          <expression>1</expression>
+          <clazz>java.lang.Integer</clazz>
+          <classMutable>false</classMutable>
+        </ContextExpressionFoundation>
+      </de.metaframe.common.sib.parameter.ContextExpression>
+    </parameter>
+    <parameter name="matches">
+      <de.metaframe.jabc.framework.sib.parameter.ContextKey>
+        <ContextKeyFoundation>
+          <key>classes</key>
+          <scope>LOCAL</scope>
+          <scopeMutable>true</scopeMutable>
+        </ContextKeyFoundation>
+      </de.metaframe.jabc.framework.sib.parameter.ContextKey>
+    </parameter>
+    <parameter name="pattern">
+      <de.metaframe.common.sib.parameter.ContextExpression>
+        <ContextExpressionFoundation>
+          <expression>URI=&quot;&amp;modules;(\S+)&quot;</expression>
+          <clazz>java.lang.String</clazz>
+          <classMutable>false</classMutable>
+        </ContextExpressionFoundation>
+      </de.metaframe.common.sib.parameter.ContextExpression>
+    </parameter>
+    <parameter name="string">
+      <de.metaframe.common.sib.parameter.ContextExpression>
+        <ContextExpressionFoundation>
+          <expression>${subclassRelation}</expression>
+          <clazz>java.lang.String</clazz>
+          <classMutable>false</classMutable>
+        </ContextExpressionFoundation>
+      </de.metaframe.common.sib.parameter.ContextExpression>
+    </parameter>
+    <finalbranches>default</finalbranches>
+    <finalbranches>error</finalbranches>
+  </sib>
+  <edge>
+    <source>8afe7e27-9ade-4ed9-9070-4d1ece277b1b</source>
+    <target>8ad91a25-c2fd-4275-97da-844d4e5a480b</target>
+    <point>242.0,195.0</point>
+    <point>437.0,135.0</point>
+    <labelposition>500.0,0.0</labelposition>
+    <branch>next</branch>
+  </edge>
+  <edge>
+    <source>8ad91a25-c2fd-4275-97da-844d4e5a480b</source>
+    <target>d37342f2-037b-417f-8fbf-79de6f3912fd</target>
+    <point>437.0,135.0</point>
+    <point>437.0,225.0</point>
+    <labelposition>500.0,0.0</labelposition>
+    <branch>default</branch>
+  </edge>
+  <edge>
+    <source>d37342f2-037b-417f-8fbf-79de6f3912fd</source>
+    <target>8afe7e27-9ade-4ed9-9070-4d1ece277b1b</target>
+    <point>437.0,225.0</point>
+    <point>242.0,195.0</point>
+    <labelposition>500.0,0.0</labelposition>
+    <branch>default</branch>
+  </edge>
+  <edge>
+    <source>8afe7e27-9ade-4ed9-9070-4d1ece277b1b</source>
+    <target>082e6e32-74a8-4398-bf5b-9194d90a5de9</target>
+    <point>242.0,195.0</point>
+    <point>77.0,360.0</point>
+    <labelposition>500.0,0.0</labelposition>
+    <branch>exit</branch>
+  </edge>
+  <sib>
+    <id>8844f9f6-7401-480e-8144-c8c40ef82c91</id>
+    <name>WriteTextFile</name>
+    <label>write .dot file</label>
+    <sib-uid>io-sibs/WriteTextFile</sib-uid>
+    <taxonomy>de.jabc.sib.common.io.WriteTextFile</taxonomy>
+    <position>396.5,468.0</position>
+    <parameter name="encoding">
+      <string>ISO-8859-1</string>
+    </parameter>
+    <parameter name="file">
+      <de.metaframe.common.sib.parameter.ContextExpression>
+        <ContextExpressionFoundation>
+          <expression>${dotFile}</expression>
+          <clazz>java.lang.Object</clazz>
+          <classMutable>false</classMutable>
+        </ContextExpressionFoundation>
+      </de.metaframe.common.sib.parameter.ContextExpression>
+    </parameter>
+    <parameter name="text">
+      <de.metaframe.common.sib.parameter.ContextExpression>
+        <ContextExpressionFoundation>
+          <expression>${dot}</expression>
+          <clazz>java.lang.Object</clazz>
+          <classMutable>false</classMutable>
+        </ContextExpressionFoundation>
+      </de.metaframe.common.sib.parameter.ContextExpression>
+    </parameter>
+    <finalbranches>default</finalbranches>
+    <finalbranches>error</finalbranches>
+  </sib>
+  <sib>
+    <id>38da50ef-b456-44d8-acda-f8c158bd37f3</id>
+    <name>PutExpression_1</name>
+    <label>create .dot file name</label>
+    <sib-uid>basic-sibs/PutExpression</sib-uid>
+    <taxonomy>de.jabc.sib.common.basic.PutExpression</taxonomy>
+    <position>182.0,468.0</position>
+    <parameter name="resolve">
+      <boolean>true</boolean>
+    </parameter>
+    <parameter name="value">
+      <de.metaframe.common.sib.parameter.ContextExpression>
+        <ContextExpressionFoundation>
+          <expression>${taxoFile}.dot</expression>
+          <clazz>java.lang.Object</clazz>
+          <classMutable>true</classMutable>
+        </ContextExpressionFoundation>
+      </de.metaframe.common.sib.parameter.ContextExpression>
+    </parameter>
+    <parameter name="variable">
+      <de.metaframe.jabc.framework.sib.parameter.ContextKey>
+        <ContextKeyFoundation>
+          <key>dotFile</key>
+          <scope>LOCAL</scope>
+          <scopeMutable>true</scopeMutable>
+        </ContextKeyFoundation>
+      </de.metaframe.jabc.framework.sib.parameter.ContextKey>
+    </parameter>
+    <finalbranches>default</finalbranches>
+    <finalbranches>error</finalbranches>
+  </sib>
+  <edge>
+    <source>38da50ef-b456-44d8-acda-f8c158bd37f3</source>
+    <target>8844f9f6-7401-480e-8144-c8c40ef82c91</target>
+    <point>225.0,495.0</point>
+    <point>375.0,495.0</point>
+    <labelposition>500.0,0.0</labelposition>
+    <branch>default</branch>
+  </edge>
+  <sib>
+    <id>1a14ac9e-4582-4cdf-9275-eac98fd7da0f</id>
+    <name>PutFile</name>
+    <label>put taxonomy file</label>
+    <sib-uid>basic-sibs/PutFile</sib-uid>
+    <taxonomy>de.jabc.sib.common.basic.PutFile</taxonomy>
+    <position>24.0,18.0</position>
+    <parameter name="value">
+      <file>/Users/lamprecht/Projects/biotoolsCompose/msutils-poc/prophets/moduleTaxonomy.owl</file>
+    </parameter>
+    <parameter name="variable">
+      <de.metaframe.jabc.framework.sib.parameter.ContextKey>
+        <ContextKeyFoundation>
+          <key>taxoFile</key>
+          <scope>LOCAL</scope>
+          <scopeMutable>true</scopeMutable>
+        </ContextKeyFoundation>
+      </de.metaframe.jabc.framework.sib.parameter.ContextKey>
+    </parameter>
+    <finalbranches>default</finalbranches>
+    <finalbranches>error</finalbranches>
+    <userobject key="ABC$START">
+      <boolean>true</boolean>
+    </userobject>
+  </sib>
+  <edge>
+    <source>082e6e32-74a8-4398-bf5b-9194d90a5de9</source>
+    <target>7bd9c21d-28c1-4713-ab8f-df2aec7de502</target>
+    <point>77.0,360.0</point>
+    <point>242.0,360.0</point>
+    <labelposition>500.0,0.0</labelposition>
+    <branch>default</branch>
+  </edge>
+  <sib>
+    <id>11b437fd-dd01-45af-a7fd-aa13a1d0ac7a</id>
+    <name>ExtractPattern_3</name>
+    <label>extract classes</label>
+    <sib-uid>basic-sibs/ExtractPattern</sib-uid>
+    <taxonomy>de.jabc.sib.common.basic.ExtractPattern</taxonomy>
+    <position>391.0,288.0</position>
+    <parameter name="group">
+      <de.metaframe.common.sib.parameter.ContextExpression>
+        <ContextExpressionFoundation>
+          <expression>1</expression>
+          <clazz>java.lang.Integer</clazz>
+          <classMutable>false</classMutable>
+        </ContextExpressionFoundation>
+      </de.metaframe.common.sib.parameter.ContextExpression>
+    </parameter>
+    <parameter name="matches">
+      <de.metaframe.jabc.framework.sib.parameter.ContextKey>
+        <ContextKeyFoundation>
+          <key>classes</key>
+          <scope>LOCAL</scope>
+          <scopeMutable>true</scopeMutable>
+        </ContextKeyFoundation>
+      </de.metaframe.jabc.framework.sib.parameter.ContextKey>
+    </parameter>
+    <parameter name="pattern">
+      <de.metaframe.common.sib.parameter.ContextExpression>
+        <ContextExpressionFoundation>
+          <expression>URI=&quot;&amp;modules;(\S+)&quot;</expression>
+          <clazz>java.lang.String</clazz>
+          <classMutable>false</classMutable>
+        </ContextExpressionFoundation>
+      </de.metaframe.common.sib.parameter.ContextExpression>
+    </parameter>
+    <parameter name="string">
+      <de.metaframe.common.sib.parameter.ContextExpression>
+        <ContextExpressionFoundation>
+          <expression>${instanceOfRelation}</expression>
+          <clazz>java.lang.String</clazz>
+          <classMutable>false</classMutable>
+        </ContextExpressionFoundation>
+      </de.metaframe.common.sib.parameter.ContextExpression>
+    </parameter>
+    <finalbranches>default</finalbranches>
+    <finalbranches>error</finalbranches>
+  </sib>
+  <edge>
+    <source>7bd9c21d-28c1-4713-ab8f-df2aec7de502</source>
+    <target>11b437fd-dd01-45af-a7fd-aa13a1d0ac7a</target>
+    <point>242.0,360.0</point>
+    <point>437.0,315.0</point>
+    <labelposition>500.0,0.0</labelposition>
+    <branch>next</branch>
+  </edge>
+  <edge>
+    <source>11b437fd-dd01-45af-a7fd-aa13a1d0ac7a</source>
+    <target>fed0fb6a-d035-4e12-b4ff-380324751c26</target>
+    <point>437.0,315.0</point>
+    <point>437.0,405.0</point>
+    <labelposition>500.0,0.0</labelposition>
+    <branch>default</branch>
+  </edge>
+  <edge>
+    <source>fed0fb6a-d035-4e12-b4ff-380324751c26</source>
+    <target>7bd9c21d-28c1-4713-ab8f-df2aec7de502</target>
+    <point>437.0,405.0</point>
+    <point>242.0,360.0</point>
+    <labelposition>500.0,0.0</labelposition>
+    <branch>default</branch>
+  </edge>
+  <sib>
+    <id>fed0fb6a-d035-4e12-b4ff-380324751c26</id>
+    <name>PutExpression_4</name>
+    <label>add a relation</label>
+    <sib-uid>basic-sibs/PutExpression</sib-uid>
+    <taxonomy>de.jabc.sib.common.basic.PutExpression</taxonomy>
+    <position>394.5,378.0</position>
+    <parameter name="resolve">
+      <boolean>true</boolean>
+    </parameter>
+    <parameter name="value">
+      <de.metaframe.common.sib.parameter.ContextExpression>
+        <ContextExpressionFoundation>
+          <expression>${dot} &quot;${classes[1]}&quot;[shape=box]; &quot;${classes[1]}&quot; -&gt; &quot;${classes[0]}&quot;;
+</expression>
+          <clazz>java.lang.Object</clazz>
+          <classMutable>true</classMutable>
+        </ContextExpressionFoundation>
+      </de.metaframe.common.sib.parameter.ContextExpression>
+    </parameter>
+    <parameter name="variable">
+      <de.metaframe.jabc.framework.sib.parameter.ContextKey>
+        <ContextKeyFoundation>
+          <key>dot</key>
+          <scope>LOCAL</scope>
+          <scopeMutable>true</scopeMutable>
+        </ContextKeyFoundation>
+      </de.metaframe.jabc.framework.sib.parameter.ContextKey>
+    </parameter>
+    <finalbranches>default</finalbranches>
+    <finalbranches>error</finalbranches>
+  </sib>
+  <edge>
+    <source>7bd9c21d-28c1-4713-ab8f-df2aec7de502</source>
+    <target>afe4c847-d033-4704-b84b-047c1cf63481</target>
+    <point>375.0,345.0</point>
+    <point>98.0,484.0</point>
+    <branch>exit</branch>
+  </edge>
+  <values/>
+</model>

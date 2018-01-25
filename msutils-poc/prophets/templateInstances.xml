@@ -1,0 +1,65 @@
+<list>
+  <templateInstance>
+    <templateName>module avoidance</templateName>
+    <variableValues>
+      <entry>
+        <string>v1</string>
+        <string>Load_MSData_ThermoRAW</string>
+      </entry>
+    </variableValues>
+  </templateInstance>
+  <templateInstance>
+    <templateName>module avoidance</templateName>
+    <variableValues>
+      <entry>
+        <string>v1</string>
+        <string>Show_AminoAcidIndex_hydropathy</string>
+      </entry>
+    </variableValues>
+  </templateInstance>
+  <templateInstance>
+    <templateName>module avoidance</templateName>
+    <variableValues>
+      <entry>
+        <string>v1</string>
+        <string>Show_AnyFile</string>
+      </entry>
+    </variableValues>
+  </templateInstance>
+  <templateInstance>
+    <templateName>module avoidance</templateName>
+    <variableValues>
+      <entry>
+        <string>v1</string>
+        <string>Show_KEGGPathwayIDs</string>
+      </entry>
+    </variableValues>
+  </templateInstance>
+  <templateInstance>
+    <templateName>module avoidance</templateName>
+    <variableValues>
+      <entry>
+        <string>v1</string>
+        <string>Show_ProteinIdentification</string>
+      </entry>
+    </variableValues>
+  </templateInstance>
+  <templateInstance>
+    <templateName>expert mode formula</templateName>
+    <variableValues>
+      <entry>
+        <string>v1</string>
+        <string>G(!&lt;msconvert&gt;true OR X(!&lt;msconvert&gt;true))</string>
+      </entry>
+    </variableValues>
+  </templateInstance>
+  <templateInstance>
+    <templateName>expert mode formula</templateName>
+    <variableValues>
+      <entry>
+        <string>v1</string>
+        <string>G(!&lt;idconvert&gt;true OR X(!&lt;idconvert&gt;true))</string>
+      </entry>
+    </variableValues>
+  </templateInstance>
+</list>
