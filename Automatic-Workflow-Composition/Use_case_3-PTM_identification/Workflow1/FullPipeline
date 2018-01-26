@@ -1,0 +1,25 @@
+#!/bin/bash
+
+myfolder="../"
+mydatabase="../ABRF_iPRG_2012_target"
+echo "$myfolder/"
+
+rm iPRG2012* iPRG2012.cpsx searchgui_out.zip
+
+# Generate decoy
+java -cp /home/biodocker/bin/SearchGUI-*/SearchGUI-*.jar eu.isas.searchgui.cmd.FastaCLI -in  ${mydatabase}.fasta -decoy
+
+
+# Setting parameters
+java -cp /home/biodocker/bin/SearchGUI-*/SearchGUI-*.jar  eu.isas.searchgui.cmd.IdentificationParametersCLI -prec_tol 50 -frag_tol 0.1 -fixed_mods "Carbamidomethylation of C" -variable_mods "Oxidation of M, Acetylation of K, Phosphorylation of S, Phosphorylation of T, Phosphorylation of Y, Methylation of K, Dimethylation of K, Trimethylation of K, Methylation of R, Dimethylation of R, Sulfonation of Y" -db ${mydatabase}_concatenated_target_decoy.fasta  -out iPRG2012.par -mc 3
+
+
+# SearchGUI
+java -Xmx4G -cp /home/biodocker/bin/SearchGUI-*/SearchGUI-*.jar eu.isas.searchgui.cmd.SearchCLI -spectrum_files "$myfolder/" -output_folder "./" -id_params iPRG2012.par -xtandem 0 -msgf 1 -comet 0 -ms_amanda 0 -myrimatch 0
+
+# PeptideShaker
+java -Xmx4G -cp /home/biodocker/bin/PeptideShaker-*/PeptideShaker-*.jar eu.isas.peptideshaker.cmd.PeptideShakerCLI -experiment iPRG2012 -sample test -replicate 1 -identification_files "./"  -out "./iPRG2012.cpsx" -id_params iPRG2012.par -spectrum_files "$myfolder"
+
+# Output results
+java -cp /home/biodocker/bin/PeptideShaker-*/PeptideShaker-*.jar eu.isas.peptideshaker.cmd.ReportCLI -in "iPRG2012.cpsx" -out_reports "./" -reports "0, 2, 3, 4, 6"
+

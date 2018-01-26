@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SUMmOnCondition>
+  <fragmentMasses>
+    <reagent mz="113.1"/>
+    <reagent mz="114.1"/>
+    <reagent mz="115.1"/>
+    <reagent mz="116.1"/>
+    <reagent mz="117.1"/>
+    <reagent mz="118.1"/>
+    <reagent mz="119.1"/>
+    <reagent mz="121.1"/>
+  </fragmentMasses>
+  <isotopicContributions>
+    <contributingMz value="1">
+      <affected mz="2" correction="0.018"/>
+      <affected mz="3" correction="0"/>
+    </contributingMz>
+    <contributingMz value="2">
+      <affected mz="1" correction="0.0067"/>
+      <affected mz="3" correction="0.0068"/>
+      <affected mz="4" correction="0.002"/>
+    </contributingMz>
+    <contributingMz value="3">
+      <affected mz="1" correction="0"/>
+      <affected mz="2" correction="0.0076"/>
+      <affected mz="4" correction="0.0123"/>
+      <affected mz="5" correction="0"/>
+    </contributingMz>
+    <contributingMz value="4">
+      <affected mz="2" correction="0"/>
+      <affected mz="3" correction="0.0121"/>
+      <affected mz="5" correction="0.0094"/>
+      <affected mz="6" correction="0"/>
+    </contributingMz>
+    <contributingMz value="5">
+      <affected mz="3" correction="0"/>
+      <affected mz="4" correction="0.0186"/>
+      <affected mz="6" correction="0.0067"/>
+      <affected mz="7" correction="0"/>
+    </contributingMz>
+    <contributingMz value="6">
+      <affected mz="4" correction="0"/>
+      <affected mz="5" correction="0.021"/>
+      <affected mz="7" correction="0.0041"/>
+    </contributingMz>
+    <contributingMz value="7">
+      <affected mz="5" correction="0"/>
+      <affected mz="6" correction="0.0259"/>
+      <affected mz="8" correction="0"/>
+    </contributingMz>
+    <contributingMz value="8">
+      <affected mz="7" correction="0"/>
+    </contributingMz>
+  </isotopicContributions>
+  <massTolerance value="0.5"/>
+  <centroiding type="2" iterations="1"/>
+  <normalization type="-1"/>
+  <targetMs level="2"/>
+  <output type="1"/>
+  <quantitationFile name="quantitation.tsv"/>
+  <minimumThreshhold value="20"/>
+</SUMmOnCondition>
