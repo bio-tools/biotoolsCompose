@@ -22,11 +22,11 @@ Alternatively, the bash scripts can also be adapted to run independently by adju
 (docker needs to be installed before, see docker.com for more details)
 
 __Get docker image__
-_docker pull biotools/automaticsworkflowcomposition
+_docker pull biotools/automaticsworkflowcomposition_
 
 __Run workflows__   
 E.g. Use case 3 workflow 1:   
-_docker run -it workflow-composition_   
+_docker run -it biotools/automaticworkflowcomposition_   
 _cd UseCases/Use_case_3-PTM_identification/Workflow1_   
 _bash FullPipeline_   
 You can run the R scripts (if available) with _R CMD BATCH GivenRScriptName_. Download the resulting data with _docker cp_
@@ -36,7 +36,7 @@ __Download files__
 _git clone https://github.com/veitveit/Automatic-Workflow-Composition_
 
 __Create docker image:__    
-_docker -t workflow-composition ._  
+_docker build -t biotools/automaticsworkflowcomposition ._  
 This will take a while.   
 (you need to be in the folder Automatic-Workflow-Composition)
 
