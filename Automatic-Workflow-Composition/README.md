@@ -1,6 +1,6 @@
 # Automatic-Workflow-Composition
 
-Collection of material including data files, scripts, workflows and results for the proteomics use cases described in the publication "Automated workflow composition from a pool of bioinformatics tools: a demonstration for mass spectrometry data analysis" (in preparation).
+Collection of material including data files, scripts, workflows and results for the proteomics use cases described in the publication "Automated workflow composition in mass spectrometry based proteomics" (submitted).
 
 ## File structure
 Configuration and data files as well scripts to run the 4 use cases and a total of 11 workflows are available in the respective _Use_case..._ folders:
@@ -11,7 +11,7 @@ Configuration and data files as well scripts to run the 4 use cases and a total 
 - Quantification of labeled iTRAQ MS data: Use_case_4-quantification
 
 ## Workflow synthesis
-Automatic synthesis is based on the PROPHETS tool which can be downloaded (https://github.com/bio-tools/biotoolsCompose/raw/master/Automatic-Workflow-Composition/prophets-project.zip) and installed. 
+Automatic synthesis is based on the PROPHETS tool which can be downloaded from http://ls5-www.cs.tu-dortmund.de/projects/prophets/download.php and installed on any platform with a recent Java version. The files for the case study are available as a .zip archive (https://github.com/bio-tools/biotoolsCompose/raw/master/Automatic-Workflow-Composition/prophets-project.zip) that can be extracted and imported into PROPHETS as a new project.
 
 ## Workflow examples
 The workflows of the four use cases are easily executed in the given Docker container. 
