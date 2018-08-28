@@ -22,7 +22,7 @@ Alternatively, the bash scripts can also be adapted to run independently by adju
 (docker needs to be installed before, see docker.com for more details)
 
 __Get docker image__
-_docker pull biotools/automaticsworkflowcomposition_
+_docker pull biotools/automaticworkflowcomposition_
 
 __Run workflows__   
 E.g. Use case 3 workflow 1:   
